@@ -6,28 +6,44 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>8C3BE728-A53A-4DB9-BC84-1C0CEBAFABD6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>QBaseFrameworkDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>7E638B6B55FA9EEEADDBB5FF4E04B9D340A72F89</key>
 		<string>github.com:QBaseFramework/QBaseNetOperation.git</string>
 		<key>D19B6909F64151111781CEB82A438F6B66454829</key>
 		<string>github.com:QBaseFramework/QBaseNetwork.git</string>
+		<key>E3C046725556B7E02DC7651BDD820D924226A22E</key>
+		<string>github.com:QBaseFramework/QBaseFrameworkDemo.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>QBaseFrameworkDemo/QBaseFrameworkDemo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7E638B6B55FA9EEEADDBB5FF4E04B9D340A72F89</key>
-		<string>QBaseNetOperation/</string>
+		<string>../../../../QBaseNetOperation</string>
 		<key>D19B6909F64151111781CEB82A438F6B66454829</key>
-		<string>QBaseNetworkObserver</string>
+		<string>../../../../QBaseNetworkObserver</string>
+		<key>E3C046725556B7E02DC7651BDD820D924226A22E</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:QBaseFramework/QBaseNetwork.git</string>
+	<string>github.com:QBaseFramework/QBaseFrameworkDemo.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D19B6909F64151111781CEB82A438F6B66454829</string>
+	<string>E3C046725556B7E02DC7651BDD820D924226A22E</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E3C046725556B7E02DC7651BDD820D924226A22E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>QBaseFrameworkDemo</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

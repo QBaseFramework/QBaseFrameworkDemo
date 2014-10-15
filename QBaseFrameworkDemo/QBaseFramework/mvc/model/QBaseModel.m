@@ -9,6 +9,14 @@
 #import "QBaseModel.h"
 #import <objc/runtime.h>
 
+@interface QBaseModel ()
+{
+@protected
+    __block BOOL _retry;
+    __block BOOL _exist;
+}
+@end
+
 @implementation QBaseModel
 
 - (id)init
@@ -55,8 +63,8 @@
  */
 - (BOOL)checkTableIsExist
 {
-    __block BOOL retry = YES;
-    __block BOOL exist = YES;
+    _retry = YES;
+    _exist = YES;
     
     [self inDatabase:^(FMDatabase *db)
      {
@@ -70,18 +78,19 @@
              
              if (0 == count)
              {
-                 exist = NO;
+                 _exist = NO;
              }
              else
              {
-                 exist = YES;
+                 _exist = YES;
              }
-             retry = NO;
+             _retry = NO;
          }
      }];
     
-    while (retry) {}
-    return exist;
+    while (_retry) {}
+    
+    return _exist;
 }
 
 /**
