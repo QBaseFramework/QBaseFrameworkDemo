@@ -268,7 +268,7 @@ va_list args_update;
             else
             {
                 
-                id str = [myObject performSelector:selector];//调用get方法
+                id str = objc_msgSend(myObject, selector);//调用get方法
                 if (str!=nil)
                 {
                     
@@ -282,11 +282,10 @@ va_list args_update;
                             [returnValue setObject:[NSString stringWithFormat:@"%@",str] forKey:name];
                         }
                     }
-                    /*else if ([class_type isEqualToString:@"Ti"]) {
-                     // int类型字段
-                     [returnValue setObject:[NSString stringWithFormat:@"%d",(NSInteger)str]forKey:name];
-                     
-                     }*/
+                    else if ([class_type isEqualToString:@"Tq"]) {
+                        // long long 类型字段
+                        [returnValue setObject:[NSString stringWithFormat:@"%lld",(long long)str]forKey:name];
+                    }
                     else if ([class_type isEqualToString:@"TB"]) {
                         // bool类型字段
                         [returnValue setObject:[NSString stringWithFormat:@"%ld",(NSInteger)str] forKey:name];
@@ -337,7 +336,8 @@ va_list args_update;
                         if (value==nil || [value isKindOfClass:[NSNull class]]) {
                             value=@"";
                         }
-                        [obj performSelector:selector withObject:value];//调用set方法
+                        
+                        objc_msgSend(obj, selector,value);//调用set方法
                         
                     }else {
                         if (value==nil||[value isKindOfClass:[NSNull class]]) {
@@ -372,10 +372,12 @@ va_list args_update;
                                 }
                                 else
                                 {
-                                    [obj performSelector:selector withObject:[value performSelector:sel withObject:nil]];
+                                    id v = objc_msgSend(value, sel);
+                                    objc_msgSend(obj, selector,v);
+
                                 }//调用set方法
                             }else {
-                                [obj performSelector:selector withObject:@""];//调用set方法
+                                objc_msgSend(obj, selector,@"");//调用set方法
                             }
                             
                         }

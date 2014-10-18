@@ -11,5 +11,5 @@
 
 #import "QBaseHttp.h"
 #import "QBaseCache.h"
-
+#import "QBaseUtils.h"
 #endif

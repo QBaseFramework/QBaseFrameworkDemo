@@ -27,5 +27,15 @@
  */
 - (void)keyboardHeightCallback:(CGFloat)keyboardHeight;
 
+/**
+ *  选择相片
+ *
+ *  @param picker        选择器
+ *  @param originalImage 原图
+ *  @param editedImage   编辑图
+ */
+- (void)photoChoose:(UIImagePickerController *)picker
+      originalImage:(UIImage *)originalImage
+        editedImage:(UIImage *)editedImage;
 @end
 

@@ -7,8 +7,6 @@
 //
 
 #import "QBaseNetOperation.h"
-#import "NSString+ArchiveCache.h"
-#import "NSDictionary+OperationURL.h"
 
 @implementation QBaseNetOperation
 
@@ -30,6 +28,11 @@
         
         // 默认数据库缓存机制打开
         self.isDatabaseCache = YES;
+        
+        // 如果定义了统一开关, 则默认全局设置
+#ifdef IS_LOADING_LOCAL_JSON
+        self.isLoadingLocalJson = IS_LOADING_LOCAL_JSON;
+#endif
         
         // 用户自定义匹配
         [self configOperation];
@@ -168,11 +171,50 @@
         case QBaseNetStatus_WiFi:
         case QBaseNetStatus_WWAN:
             
-            [self execute];
+            if (_isLoadingLocalJson)
+                [self loadingLocalJson];
+            else
+                [self execute];
+           
             break;
     }
 }
 
+#pragma mark -
+#pragma mark 获取本地Json数据
+
+/**
+ *  获取本地数据
+ */
+- (void)loadingLocalJson
+{
+    if (!self.localJsonPath) {
+        NSLog(@"没有设置模拟数据文件路径");
+        return;
+    }
+    
+    // 根据文件路径, 读取Json文件
+    NSData *data = [NSData dataWithContentsOfFile:_localJsonPath];
+    
+    NSError *err;
+    NSDictionary *localJson = [NSJSONSerialization JSONObjectWithData:data
+                                                              options:0
+                                                                error:&err];
+    if (localJson) {
+        
+        // 解析localJson
+        _dataArray = [self parseResponseData:localJson];
+        
+        [self successCallback];
+   
+    }else {
+        
+        // 解析文件失败, 检查文件格式是否正确
+        _error = err;
+        
+        [self failedCallback];
+    }
+}
 
 #pragma mark -
 #pragma mark - 归档处理
@@ -215,8 +257,8 @@
     
     // 请求成功, 显示异常界面
     if ([self.delegate isKindOfClass:[QBaseViewController class]] &&
-        [(QBaseViewController *)self.delegate respondsToSelector:@selector(hiddenErrorView)]) {
-        [(QBaseViewController *)self.delegate performSelector:@selector(hiddenErrorView)];
+        [self.delegate respondsToSelector:@selector(hiddenErrorView)]) {
+        [self.delegate performSelector:@selector(hiddenErrorView)];
     }
 }
 
@@ -230,8 +272,8 @@
     
     // 请求失败, 隐藏异常界面
     if ([self.delegate isKindOfClass:[QBaseViewController class]] &&
-        [(QBaseViewController *)self.delegate respondsToSelector:@selector(showErrorView)]) {
-        [(QBaseViewController *)self.delegate performSelector:@selector(showErrorView)];
+        [self.delegate respondsToSelector:@selector(showErrorView)]) {
+        [self.delegate performSelector:@selector(showErrorView)];
     }
 }
 
@@ -250,7 +292,6 @@
     [request GET:_url
           params:_params
         complete:^(id result, NSError *err) {
-        
             [self requestComplete:result error:err];
     }];
 }
@@ -288,7 +329,8 @@
         _responseData = result;
     }
     
-    if (self.isArchiveCache && result && [result isKindOfClass:[NSDictionary class]]) {
+    if (self.isArchiveCache  &&  // 是否开启归档缓存
+        result && [result isKindOfClass:[NSDictionary class]]) {
         
         NSData * data = [NSKeyedArchiver archivedDataWithRootObject:result];
         

@@ -8,7 +8,8 @@
 
 #import "FMDatabaseQueue.h"
 
-#define DEFAULE_DB_PATH @"/Users/andy/Desktop/data.db"
+#define DEFAULE_DB_PATH [NSString stringWithFormat:@"%@/Documents/data.db", NSHomeDirectory()]
+
 @interface QBaseDatabase : FMDatabaseQueue
 DEFINE_SINGLETON_FOR_HEADER(QBaseDatabase)
 

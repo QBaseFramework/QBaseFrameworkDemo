@@ -8,6 +8,7 @@
 
 #import "QBaseViewController.h"
 #import "QBaseViewController+KeyBoardObserver.h"
+#import "QBaseViewController+Photo.h"
 
 @interface QBaseViewController ()
 
@@ -16,7 +17,7 @@
 @implementation QBaseViewController
 
 #pragma mark -
-#pragma mark - 异常处理
+#pragma mark 异常处理
 
 /**
  *  展示异常试图
@@ -49,7 +50,7 @@
 }
 
 #pragma mark -
-#pragma mark - 生命周期
+#pragma mark 生命周期
 
 - (void)viewDidLoad
 {
@@ -75,11 +76,30 @@
 }
 
 #pragma mark -
-#pragma mark - Methods Template
+#pragma mark Keybord 键盘回调
 
 - (void)keyboardHeightCallback:(CGFloat)keyboardHeight
 {
 
 }
 
+#pragma mark -
+#pragma mark ChoosePhoto 相册选择回调
+
+- (void)photoChoose:(UIImagePickerController *)picker originalImage:(UIImage *)originalImage editedImage:(UIImage *)editedImage
+{
+    
+}
+
+#pragma mark -
+#pragma mark QBaseNetOperationDelegate
+
+- (void)netOperationDidFinish:(QBaseNetOperation *)operation
+{
+
+}
+- (void)netOperationDidFailed:(QBaseNetOperation *)operation
+{
+
+}
 @end

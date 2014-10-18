@@ -7,6 +7,11 @@
 //
 #import <Foundation/Foundation.h>
 #import "QBaseNetworkObserver.h"
+#import "NSString+ArchiveCache.h"
+#import "NSDictionary+OperationURL.h"
+
+// 是否全局获取本地文件
+#define IS_LOADING_LOCAL_JSON 0
 
 typedef void (^QBaseHTTPBodyBlock) (id<AFMultipartFormData>formData);
 
@@ -23,6 +28,16 @@ typedef void (^QBaseHTTPBodyBlock) (id<AFMultipartFormData>formData);
  *  代理
  */
 @property (nonatomic, assign) id<QBaseNetOperationDelegate> delegate;
+
+/**
+ *  是否读取本地Json数据, 忽略HTTP请求
+ */
+@property (nonatomic, assign) BOOL isLoadingLocalJson;
+
+/**
+ *  本地Json模拟数据
+ */
+@property (nonatomic, copy) NSString *localJsonPath;
 
 /**
  *  请求服务器URL

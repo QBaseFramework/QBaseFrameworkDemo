@@ -24,5 +24,8 @@
 
 // UI
 #import "EGOCache.h"
+#import "ODRefreshControl.h"
+
+#import <objc/message.h>
 
 #endif

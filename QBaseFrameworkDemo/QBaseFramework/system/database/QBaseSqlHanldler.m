@@ -47,7 +47,10 @@
 		}else if ([class_type isEqualToString:@"Ti"]) {													// long类型字段
 			[keys addObject:[NSString stringWithFormat:@"%@ INTEGER ",name]];
 			continue;
-		}else if ([class_type isEqualToString:@"Td"]) {											        // double类型字段
+        }else if ([class_type isEqualToString:@"Tq"]) {											        // long long 类型字段
+            [keys addObject:[NSString stringWithFormat:@"%@ REAL ",name]];
+            continue;
+        }else if ([class_type isEqualToString:@"Td"]) {											        // double类型字段
 			[keys addObject:[NSString stringWithFormat:@"%@ REAL ",name]];
 			continue;
 		}else if ([class_type isEqualToString:@"Tf"]) {											        // float类型字段
@@ -201,8 +204,8 @@
         sql=[sql stringByAppendingFormat:@" order by %@",order];
     }
     if (pageNumber>0) {
-        int startNumber=(pageNumber-1)*pageSize;
-        sql=[sql stringByAppendingFormat:@" Limit %ld Offset %d",(long)pageSize,startNumber];
+        long startNumber=(pageNumber-1)*pageSize;
+        sql=[sql stringByAppendingFormat:@" Limit %ld Offset %ld",(long)pageSize,startNumber];
     }
     else
     {
@@ -292,11 +295,10 @@
                             [returnValue setObject:[NSString stringWithFormat:@"%@",str] forKey:name];
                         }
                     }
-                    /*else if ([class_type isEqualToString:@"Ti"]) {
-                        // int类型字段
-                        [returnValue setObject:[NSString stringWithFormat:@"%d",(NSInteger)str]forKey:name];
-                        
-                    }*/
+                    else if ([class_type isEqualToString:@"Tq"]) {
+                        // long long 类型字段
+                        [returnValue setObject:[NSString stringWithFormat:@"%lld",(long long)str]forKey:name];
+                    }
                     else if ([class_type isEqualToString:@"TB"]) {
                         // bool类型字段
                         [returnValue setObject:[NSString stringWithFormat:@"%ld",(long)str] forKey:name];
