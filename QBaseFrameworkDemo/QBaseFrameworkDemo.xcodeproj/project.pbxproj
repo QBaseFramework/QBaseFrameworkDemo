@@ -14,6 +14,10 @@
 		A103429A19F27F880042EF1C /* QBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A103429719F27F880042EF1C /* QBaseTableView.m */; };
 		A103429B19F27F880042EF1C /* QBaseWaterDropRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A103429919F27F880042EF1C /* QBaseWaterDropRefreshTableView.m */; };
 		A103429F19F27FB50042EF1C /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A103429E19F27FB50042EF1C /* ODRefreshControl.m */; };
+		A1457A8319F4E78A001185D9 /* QBaseViewController+LocationGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A8219F4E78A001185D9 /* QBaseViewController+LocationGeocoder.m */; };
+		A1457A8E19F4E83B001185D9 /* QBaseLocationGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A8B19F4E83B001185D9 /* QBaseLocationGeocoder.m */; };
+		A1457A9419F4E873001185D9 /* FCCurrentLocationGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A9119F4E873001185D9 /* FCCurrentLocationGeocoder.m */; };
+		A1457A9519F4E873001185D9 /* FCIPAddressGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A9319F4E873001185D9 /* FCIPAddressGeocoder.m */; };
 		A1E958E319EE6E9F006B68C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E958E219EE6E9F006B68C2 /* Foundation.framework */; };
 		A1E958E519EE6E9F006B68C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E958E419EE6E9F006B68C2 /* CoreGraphics.framework */; };
 		A1E958E719EE6E9F006B68C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E958E619EE6E9F006B68C2 /* UIKit.framework */; };
@@ -121,6 +125,14 @@
 		A103429919F27F880042EF1C /* QBaseWaterDropRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseWaterDropRefreshTableView.m; sourceTree = "<group>"; };
 		A103429D19F27FB50042EF1C /* ODRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
 		A103429E19F27FB50042EF1C /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
+		A1457A8119F4E78A001185D9 /* QBaseViewController+LocationGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QBaseViewController+LocationGeocoder.h"; sourceTree = "<group>"; };
+		A1457A8219F4E78A001185D9 /* QBaseViewController+LocationGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QBaseViewController+LocationGeocoder.m"; sourceTree = "<group>"; };
+		A1457A8A19F4E83B001185D9 /* QBaseLocationGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseLocationGeocoder.h; sourceTree = "<group>"; };
+		A1457A8B19F4E83B001185D9 /* QBaseLocationGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseLocationGeocoder.m; sourceTree = "<group>"; };
+		A1457A9019F4E873001185D9 /* FCCurrentLocationGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCCurrentLocationGeocoder.h; sourceTree = "<group>"; };
+		A1457A9119F4E873001185D9 /* FCCurrentLocationGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCCurrentLocationGeocoder.m; sourceTree = "<group>"; };
+		A1457A9219F4E873001185D9 /* FCIPAddressGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCIPAddressGeocoder.h; sourceTree = "<group>"; };
+		A1457A9319F4E873001185D9 /* FCIPAddressGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCIPAddressGeocoder.m; sourceTree = "<group>"; };
 		A1E958DF19EE6E9F006B68C2 /* QBaseFrameworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QBaseFrameworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E958E219EE6E9F006B68C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1E958E419EE6E9F006B68C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -359,6 +371,26 @@
 			path = QBaseFramework/vendor/ODRefreshControl;
 			sourceTree = SOURCE_ROOT;
 		};
+		A1457A8419F4E83B001185D9 /* locationGeocoder */ = {
+			isa = PBXGroup;
+			children = (
+				A1457A8A19F4E83B001185D9 /* QBaseLocationGeocoder.h */,
+				A1457A8B19F4E83B001185D9 /* QBaseLocationGeocoder.m */,
+			);
+			path = locationGeocoder;
+			sourceTree = "<group>";
+		};
+		A1457A8F19F4E873001185D9 /* FCCurrentLocationGeocoder */ = {
+			isa = PBXGroup;
+			children = (
+				A1457A9019F4E873001185D9 /* FCCurrentLocationGeocoder.h */,
+				A1457A9119F4E873001185D9 /* FCCurrentLocationGeocoder.m */,
+				A1457A9219F4E873001185D9 /* FCIPAddressGeocoder.h */,
+				A1457A9319F4E873001185D9 /* FCIPAddressGeocoder.m */,
+			);
+			path = FCCurrentLocationGeocoder;
+			sourceTree = "<group>";
+		};
 		A1E958D619EE6E9F006B68C2 = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +510,8 @@
 		A1E9591519EE6EB3006B68C2 /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				A1457A8119F4E78A001185D9 /* QBaseViewController+LocationGeocoder.h */,
+				A1457A8219F4E78A001185D9 /* QBaseViewController+LocationGeocoder.m */,
 				A103429219F27E4F0042EF1C /* QBaseViewController+Photo.h */,
 				A103429319F27E4F0042EF1C /* QBaseViewController+Photo.m */,
 				A1E9591619EE6EB3006B68C2 /* QBaseViewController+KeyBoardObserver.h */,
@@ -606,6 +640,7 @@
 			isa = PBXGroup;
 			children = (
 				A103429119F27DBB0042EF1C /* QBaseUtils.h */,
+				A1457A8419F4E83B001185D9 /* locationGeocoder */,
 				A103428119F27D9F0042EF1C /* fileManager */,
 				A103428419F27D9F0042EF1C /* ImageCache */,
 				A103428A19F27D9F0042EF1C /* userInfo */,
@@ -616,6 +651,7 @@
 		A1E9594019EE6EB3006B68C2 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				A1457A8F19F4E873001185D9 /* FCCurrentLocationGeocoder */,
 				A1E9594119EE6EB3006B68C2 /* AFNetworking */,
 				A1E9595819EE6EB3006B68C2 /* EGOCache */,
 				A1E9595B19EE6EB3006B68C2 /* FastImageCache */,
@@ -952,6 +988,7 @@
 				A1E959EC19EE6EB3006B68C2 /* FICImageTableEntry.m in Sources */,
 				A1E95A0819EE6EB3006B68C2 /* MKAnnotationView+WebCache.m in Sources */,
 				A1E95A1B19EE6EB3006B68C2 /* TMDiskCache.m in Sources */,
+				A1457A8E19F4E83B001185D9 /* QBaseLocationGeocoder.m in Sources */,
 				A1E95A0319EE6EB3006B68C2 /* JSONValueTransformer.m in Sources */,
 				A1E95A0219EE6EB3006B68C2 /* JSONKeyMapper.m in Sources */,
 				A1E958F319EE6E9F006B68C2 /* QBaseAppDelegate.m in Sources */,
@@ -970,6 +1007,7 @@
 				A1E959FA19EE6EB3006B68C2 /* JSONModel.m in Sources */,
 				A1E959FB19EE6EB3006B68C2 /* JSONModelArray.m in Sources */,
 				A1E95A0B19EE6EB3006B68C2 /* SDWebImageCompat.m in Sources */,
+				A1457A9519F4E873001185D9 /* FCIPAddressGeocoder.m in Sources */,
 				A1E959E219EE6EB3006B68C2 /* AFURLConnectionOperation.m in Sources */,
 				A1E959F619EE6EB3006B68C2 /* FMDatabaseQueue.m in Sources */,
 				A1E959F019EE6EB3006B68C2 /* FLAnimatedImageView.m in Sources */,
@@ -996,7 +1034,9 @@
 				A1E959D119EE6EB3006B68C2 /* QBaseModel.m in Sources */,
 				A1E959E919EE6EB3006B68C2 /* FICImageFormat.m in Sources */,
 				A103429F19F27FB50042EF1C /* ODRefreshControl.m in Sources */,
+				A1457A9419F4E873001185D9 /* FCCurrentLocationGeocoder.m in Sources */,
 				A1E959E019EE6EB3006B68C2 /* AFNetworkReachabilityManager.m in Sources */,
+				A1457A8319F4E78A001185D9 /* QBaseViewController+LocationGeocoder.m in Sources */,
 				A1E959EB19EE6EB3006B68C2 /* FICImageTableChunk.m in Sources */,
 				A1E959E519EE6EB3006B68C2 /* AFURLSessionManager.m in Sources */,
 				A103429419F27E4F0042EF1C /* QBaseViewController+Photo.m in Sources */,

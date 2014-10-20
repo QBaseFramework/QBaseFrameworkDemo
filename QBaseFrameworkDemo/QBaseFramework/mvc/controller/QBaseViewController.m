@@ -9,7 +9,7 @@
 #import "QBaseViewController.h"
 #import "QBaseViewController+KeyBoardObserver.h"
 #import "QBaseViewController+Photo.h"
-
+#import "QBaseViewController+LocationGeocoder.h"
 @interface QBaseViewController ()
 
 @end
@@ -102,4 +102,13 @@
 {
 
 }
+
+#pragma mark -
+#pragma mark QBaseLocationGeocoder 定位回调
+
+- (void)locationGeocoder:(QBaseLocationGeocoder *)geocoder complete:(BOOL)success
+{
+    
+}
+
 @end

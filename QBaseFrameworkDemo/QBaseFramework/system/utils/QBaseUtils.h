@@ -13,5 +13,5 @@
 #import "UIImageView+LoadImage.h"
 #import "QBaseViewController+Photo.h"
 #import "QBaseUserInfo.h"
-
+#import "QBaseLocationGeocoder.h"
 #endif

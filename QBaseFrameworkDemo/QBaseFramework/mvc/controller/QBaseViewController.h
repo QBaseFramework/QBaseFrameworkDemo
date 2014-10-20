@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "QBaseNetOperation.h"
 
+@class QBaseLocationGeocoder;
 @interface QBaseViewController : UIViewController<QBaseNetOperationDelegate>
 /**
  *  异常状态图片
@@ -37,5 +38,14 @@
 - (void)photoChoose:(UIImagePickerController *)picker
       originalImage:(UIImage *)originalImage
         editedImage:(UIImage *)editedImage;
+
+/**
+ *  定位回调
+ *
+ *  @param geocoder      定位对象
+ *  @param isSuccess     是否定位成功
+ */
+- (void)locationGeocoder:(QBaseLocationGeocoder *)geocoder
+                complete:(BOOL)success;
 @end
 
