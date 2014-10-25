@@ -11,6 +11,15 @@
 @interface QBaseViewController (Photo)<UIActionSheetDelegate, UIImagePickerControllerDelegate,
     UINavigationControllerDelegate>
 
-- (void)photoChoose;
+/**
+ *  选择器展示页面
+ */
+- (void)photoChooseShowActionSheetInView:(UIView *)view;
+
+/**
+ *  Action代理回调内部调用
+ */
+- (void)photoChooseWithActionSheet:(UIActionSheet *)actionSheet
+              clickedButtonAtIndex:(NSInteger)buttonIndex;
 
 @end

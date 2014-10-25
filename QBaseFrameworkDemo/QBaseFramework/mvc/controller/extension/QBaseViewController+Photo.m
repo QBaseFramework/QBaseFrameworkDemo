@@ -13,25 +13,29 @@
 if ([UIImagePickerController isSourceTypeAvailable:__sourceType]) {\
     __picker.sourceType = __sourceType;\
 }
-
+#define CHOOSE_PHOTO_SHEET_TAG 20001
 @implementation QBaseViewController (Photo)
 
-- (void)photoChoose
+- (void)photoChooseShowActionSheetInView:(UIView *)view
 {
     UIActionSheet *_sheet = [[UIActionSheet alloc] initWithTitle:nil
                                                         delegate:self
                                                cancelButtonTitle:@"取消"
                                           destructiveButtonTitle:nil
                                                otherButtonTitles:@"拍照",@"相册", nil];
-    
-    [_sheet showInView:[[UIApplication sharedApplication] delegate].window];
+    _sheet.tag = CHOOSE_PHOTO_SHEET_TAG;
+    [_sheet showInView:view];
 }
 
 #pragma mark -
-#pragma mark UIActionSheet Delegate
+#pragma mark UIActionSheet Delegate Helper
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+- (void)photoChooseWithActionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+    if (actionSheet.tag != CHOOSE_PHOTO_SHEET_TAG) {
+        return;
+    }
+    
     if (buttonIndex == 2) {
         NSLog(@"取消选择");
         return;
@@ -50,11 +54,7 @@ if ([UIImagePickerController isSourceTypeAvailable:__sourceType]) {\
             break;
     }  
     
-    [self presentViewController:picker animated:YES completion:^{
-        
-        // 模态推送完成回调
-        
-    }];
+    [self presentViewController:picker animated:YES completion:nil];
 }
 
 
@@ -69,7 +69,7 @@ if ([UIImagePickerController isSourceTypeAvailable:__sourceType]) {\
     // 编辑图
     UIImage *editedImage = [info objectForKey:@"UIImagePickerControllerEditedImage"];
     
-    objc_msgSend(self, @selector(photoChoose:originalImage:editedImage:), picker, originalImage, editedImage);
+    ((void(*)(id,SEL,id,id,id))objc_msgSend)(self, @selector(photoChoose:originalImage:editedImage:), picker, originalImage, editedImage);
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 }

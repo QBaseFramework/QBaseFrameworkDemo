@@ -9,12 +9,14 @@
 #import "QBaseNetworkObserver.h"
 #import "NSString+ArchiveCache.h"
 #import "NSDictionary+OperationURL.h"
+#import "QBaseNetOperationURLHeader.h"
 
 // 是否全局获取本地文件
 #define IS_LOADING_LOCAL_JSON 0
 
 typedef void (^QBaseHTTPBodyBlock) (id<AFMultipartFormData>formData);
 
+@class QBaseRequest;
 @class QBaseNetOperation;
 @protocol QBaseNetOperationDelegate <NSObject>
 
@@ -115,6 +117,14 @@ typedef void (^QBaseHTTPBodyBlock) (id<AFMultipartFormData>formData);
  *  开始请求任务
  */
 - (void)start;
+
+#pragma mark -
+#pragma mark 重写函数
+
+/**
+ *  重写请求类
+ */
+- (QBaseRequest *)request;
 
 /**
  *  配置网络请求任务

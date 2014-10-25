@@ -23,9 +23,12 @@
 {
     if (self = [super init]) {
         
-        [self createTable];
-        [self createUniqueIndex:[self uniqueIndex]];
-    }
+        // 如果存在表, 那么就不在创建表
+        if (![self checkTableIsExist]) {
+            [self createTable];
+            [self createUniqueIndex:[self uniqueIndex]];
+        }
+}
     
     return self;
 }
@@ -43,10 +46,6 @@
  */
 - (BOOL)createTable
 {
-    // 如果存在表, 那么就不在创建表
-    if ([self checkTableIsExist]) {
-        return NO;
-    }
     return [self executeUpdate:[QBaseSqlHanldler createTableSql:[self class]], nil];
 }
 
@@ -267,8 +266,8 @@ va_list args_update;
             }
             else
             {
-                
-                id str = objc_msgSend(myObject, selector);//调用get方法
+        
+                id str = ((id(*)(id,SEL))objc_msgSend)(myObject, selector);//调用get方法
                 if (str!=nil)
                 {
                     
@@ -337,7 +336,7 @@ va_list args_update;
                             value=@"";
                         }
                         
-                        objc_msgSend(obj, selector,value);//调用set方法
+                        ((void(*)(id,SEL,id))objc_msgSend)(obj, selector,value);//调用set方法
                         
                     }else {
                         if (value==nil||[value isKindOfClass:[NSNull class]]) {
@@ -370,14 +369,25 @@ va_list args_update;
                                     //                                        IMP myImp1 = [obj methodForSelector:selector];
                                     //                                        myImp1(obj,selector,[NSNumber numberWithFloat:sid]);
                                 }
-                                else
+                                else if([type isEqualToString:@"long"])
                                 {
-                                    id v = objc_msgSend(value, sel);
-                                    objc_msgSend(obj, selector,v);
+                                    long v = ((long(*)(id,SEL))objc_msgSend)(value, sel);
+                                    
+                                    ((void(*)(id,SEL,long))objc_msgSend)(obj, selector,v);
 
+                                }else if ([type isEqualToString:@"int"])
+                                {
+                                    // 报错 需要修正类型回调
+                                    int v = ((int(*)(id,SEL))objc_msgSend)(value, sel);
+                                    ((void(*)(id,SEL,int))objc_msgSend)(obj, selector,v);
+                                }else {
+                                
+                                    int v = ((int(*)(id,SEL))objc_msgSend)(value, sel);
+                                    ((void(*)(id,SEL,int))objc_msgSend)(obj, selector,v);
+                                    
                                 }//调用set方法
                             }else {
-                                objc_msgSend(obj, selector,@"");//调用set方法
+                                ((void(*)(id,SEL,id))objc_msgSend)(obj, selector,@"");//调用set方法
                             }
                             
                         }

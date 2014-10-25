@@ -295,6 +295,7 @@
 		A1E959CE19EE6EB3006B68C2 /* TMMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMMemoryCache.m; sourceTree = "<group>"; };
 		A1E95A1D19EE6F9E006B68C2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A1E95A1F19EE6FA2006B68C2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		A1EF2E4819FB430C00F6B6AF /* QBaseNetOperationURLHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBaseNetOperationURLHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -593,6 +594,7 @@
 				A1E9592E19EE6EB3006B68C2 /* helper */,
 				A1E9593319EE6EB3006B68C2 /* QBaseNetOperation.h */,
 				A1E9593419EE6EB3006B68C2 /* QBaseNetOperation.m */,
+				A1EF2E4819FB430C00F6B6AF /* QBaseNetOperationURLHeader.h */,
 			);
 			path = QBaseNetOperation;
 			sourceTree = "<group>";
