@@ -49,3 +49,7 @@
                 complete:(BOOL)success;
 @end
 
+#import "QBaseViewController+KeyBoardObserver.h"
+#import "QBaseViewController+Photo.h"
+#import "QBaseViewController+LocationGeocoder.h"
+

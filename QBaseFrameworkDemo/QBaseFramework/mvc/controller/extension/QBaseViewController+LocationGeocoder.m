@@ -18,7 +18,7 @@
     [[QBaseLocationGeocoder sharedGeocoder] geocode:^(BOOL success) {
        
         if ([self respondsToSelector:@selector(locationGeocoder:complete:)]) {
-            objc_msgSend(self, @selector(locationGeocoder:complete:), [QBaseLocationGeocoder sharedGeocoder], success);
+            ((void(*)(id,SEL,id,BOOL))objc_msgSend)(self, @selector(locationGeocoder:complete:), [QBaseLocationGeocoder sharedGeocoder], success);
         }
     }];
 }
@@ -31,7 +31,7 @@
     [[QBaseLocationGeocoder sharedGeocoder] reverseGeocode:^(BOOL success) {
         
         if ([self respondsToSelector:@selector(locationGeocoder:complete:)]) {
-            objc_msgSend(self, @selector(locationGeocoder:complete:), [QBaseLocationGeocoder sharedGeocoder], success);
+            ((void(*)(id,SEL,id,BOOL))objc_msgSend)(self, @selector(locationGeocoder:complete:), [QBaseLocationGeocoder sharedGeocoder], success);
         }
     }];
 }

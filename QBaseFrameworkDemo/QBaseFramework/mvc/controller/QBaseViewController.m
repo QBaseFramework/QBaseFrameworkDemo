@@ -7,9 +7,7 @@
 //
 
 #import "QBaseViewController.h"
-#import "QBaseViewController+KeyBoardObserver.h"
-#import "QBaseViewController+Photo.h"
-#import "QBaseViewController+LocationGeocoder.h"
+
 @interface QBaseViewController ()
 
 @end
