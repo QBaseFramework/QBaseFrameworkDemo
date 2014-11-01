@@ -14,7 +14,7 @@
 /**
  *  选择器展示页面
  */
-- (void)photoChooseShowActionSheetInView:(UIView *)view;
+- (void)photoChoose;
 
 /**
  *  Action代理回调内部调用

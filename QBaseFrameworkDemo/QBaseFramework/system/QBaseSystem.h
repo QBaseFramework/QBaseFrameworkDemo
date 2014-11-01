@@ -12,4 +12,5 @@
 #import "QBaseHttp.h"
 #import "QBaseCache.h"
 #import "QBaseUtils.h"
+#import "QBaseCategoryHeader.h"
 #endif

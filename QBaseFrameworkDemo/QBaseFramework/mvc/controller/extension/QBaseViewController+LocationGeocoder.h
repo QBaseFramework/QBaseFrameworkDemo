@@ -13,11 +13,11 @@
 /**
  *  获取当前经纬度
  */
-- (void)getCurrentLocation;
+- (void)locationCoordinate;
 
 /**
- *  获取当前经纬度下的相关信息
+ *  获取当前经纬度下的详细信息
  */
-- (void)getCurrentLocationInfo;
+- (void)locationDetails;
 
 @end

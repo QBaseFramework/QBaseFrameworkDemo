@@ -13,12 +13,12 @@
 /**
  *  获取当前经纬度
  */
-- (void)getCurrentLocation
+- (void)locationCoordinate
 {
     [[QBaseLocationGeocoder sharedGeocoder] geocode:^(BOOL success) {
        
         if ([self respondsToSelector:@selector(locationGeocoder:complete:)]) {
-            ((void(*)(id,SEL,id,BOOL))objc_msgSend)(self, @selector(locationGeocoder:complete:), [QBaseLocationGeocoder sharedGeocoder], success);
+            [self locationGeocoder:(QBaseLocationGeocoder *)[QBaseLocationGeocoder sharedGeocoder] complete:success];
         }
     }];
 }
@@ -26,12 +26,12 @@
 /**
  *  获取当前经纬度下的相关信息
  */
-- (void)getCurrentLocationInfo
+- (void)locationDetails
 {
     [[QBaseLocationGeocoder sharedGeocoder] reverseGeocode:^(BOOL success) {
         
         if ([self respondsToSelector:@selector(locationGeocoder:complete:)]) {
-            ((void(*)(id,SEL,id,BOOL))objc_msgSend)(self, @selector(locationGeocoder:complete:), [QBaseLocationGeocoder sharedGeocoder], success);
+            [self locationGeocoder:(QBaseLocationGeocoder *)[QBaseLocationGeocoder sharedGeocoder] complete:success];
         }
     }];
 }

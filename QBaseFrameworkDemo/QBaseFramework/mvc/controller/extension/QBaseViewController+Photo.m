@@ -13,10 +13,11 @@
 if ([UIImagePickerController isSourceTypeAvailable:__sourceType]) {\
     __picker.sourceType = __sourceType;\
 }
+
 #define CHOOSE_PHOTO_SHEET_TAG 20001
 @implementation QBaseViewController (Photo)
 
-- (void)photoChooseShowActionSheetInView:(UIView *)view
+- (void)photoChoose
 {
     UIActionSheet *_sheet = [[UIActionSheet alloc] initWithTitle:nil
                                                         delegate:self
@@ -24,7 +25,14 @@ if ([UIImagePickerController isSourceTypeAvailable:__sourceType]) {\
                                           destructiveButtonTitle:nil
                                                otherButtonTitles:@"拍照",@"相册", nil];
     _sheet.tag = CHOOSE_PHOTO_SHEET_TAG;
-    [_sheet showInView:view];
+    
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+
+    if (keyWindow) {
+        [_sheet showInView:keyWindow];
+    }else {
+        QBASE_LOG(@"%@ 异常", [self class]);
+    };
 }
 
 #pragma mark -
@@ -68,8 +76,11 @@ if ([UIImagePickerController isSourceTypeAvailable:__sourceType]) {\
     
     // 编辑图
     UIImage *editedImage = [info objectForKey:@"UIImagePickerControllerEditedImage"];
-    
-    ((void(*)(id,SEL,id,id,id))objc_msgSend)(self, @selector(photoChoose:originalImage:editedImage:), picker, originalImage, editedImage);
+
+    // 代理回调
+    if ([self respondsToSelector:@selector(photoChoose:originalImage:editedImage:)]) {
+        [self photoChoose:picker originalImage:originalImage editedImage:editedImage];
+    }
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 }

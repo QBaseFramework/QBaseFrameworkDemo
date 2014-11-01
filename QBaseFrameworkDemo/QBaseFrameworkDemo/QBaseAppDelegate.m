@@ -7,6 +7,7 @@
 //
 
 #import "QBaseAppDelegate.h"
+#import "QBaseDemoViewController.h"
 
 @implementation QBaseAppDelegate
 
@@ -18,7 +19,10 @@
 
     
     
+
+    
     // Override point for customization after application launch.
+    self.window.rootViewController = [[QBaseDemoViewController alloc] init];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

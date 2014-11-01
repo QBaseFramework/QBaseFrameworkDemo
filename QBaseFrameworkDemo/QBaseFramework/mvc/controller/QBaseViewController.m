@@ -13,22 +13,20 @@
 @end
 
 @implementation QBaseViewController
+@synthesize errorView;
 
 #pragma mark -
-#pragma mark 异常处理
+#pragma mark 网络异常 提示处理
 
 /**
  *  展示异常试图
  */
 - (void)showErrorView
 {
-    if (!self.errorView) {
-        self.errorView = [[UIView alloc] initWithFrame:self.view.bounds];
-        self.errorView.backgroundColor = [UIColor redColor];
-        [self.view addSubview:self.errorView];
+    if (self.errorView) {
+        self.errorView.hidden = NO;
+        [self.view bringSubviewToFront:self.errorView];
     }
-    [self.view bringSubviewToFront:_errorView];
-    _errorView.hidden = NO;
 }
 
 /**
@@ -36,15 +34,9 @@
  */
 - (void)hiddenErrorView
 {
-    _errorView.hidden = YES;
-}
-
-/**
- *  异常视图点击回调
- */
-- (void)errorViewClicked:(UITapGestureRecognizer *)tapGesture
-{
-    
+    if (self.errorView) {
+        self.errorView.hidden = YES;
+    }
 }
 
 #pragma mark -
@@ -53,8 +45,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
- 
-    self.automaticallyAdjustsScrollViewInsets = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -78,35 +68,25 @@
 
 - (void)keyboardHeightCallback:(CGFloat)keyboardHeight
 {
-
+    // 键盘高度发生变化回调
 }
+
 
 #pragma mark -
 #pragma mark ChoosePhoto 相册选择回调
 
 - (void)photoChoose:(UIImagePickerController *)picker originalImage:(UIImage *)originalImage editedImage:(UIImage *)editedImage
 {
-    
+    // 选择相册回调
 }
 
-#pragma mark -
-#pragma mark QBaseNetOperationDelegate
-
-- (void)netOperationDidFinish:(QBaseNetOperation *)operation
-{
-
-}
-- (void)netOperationDidFailed:(QBaseNetOperation *)operation
-{
-
-}
 
 #pragma mark -
 #pragma mark QBaseLocationGeocoder 定位回调
 
 - (void)locationGeocoder:(QBaseLocationGeocoder *)geocoder complete:(BOOL)success
 {
-    
+    // 定位回调
 }
 
 @end

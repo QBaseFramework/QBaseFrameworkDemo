@@ -14,6 +14,11 @@
 		A103429A19F27F880042EF1C /* QBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A103429719F27F880042EF1C /* QBaseTableView.m */; };
 		A103429B19F27F880042EF1C /* QBaseWaterDropRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A103429919F27F880042EF1C /* QBaseWaterDropRefreshTableView.m */; };
 		A103429F19F27FB50042EF1C /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A103429E19F27FB50042EF1C /* ODRefreshControl.m */; };
+		A106EEDD1A04CDBA00B4C470 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = A106EEDC1A04CDBA00B4C470 /* 1.png */; };
+		A106EEE21A04EB0B00B4C470 /* UIView+DDAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = A106EEE11A04EB0B00B4C470 /* UIView+DDAddition.m */; };
+		A106EEE71A04EBA000B4C470 /* NSDate+DDAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = A106EEE61A04EBA000B4C470 /* NSDate+DDAddition.m */; };
+		A106EEEB1A04EBEA00B4C470 /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = A106EEEA1A04EBEA00B4C470 /* NSDictionary+Safe.m */; };
+		A106EEEF1A04F04C00B4C470 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = A106EEEE1A04F04C00B4C470 /* NSString+Additions.m */; };
 		A1457A8319F4E78A001185D9 /* QBaseViewController+LocationGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A8219F4E78A001185D9 /* QBaseViewController+LocationGeocoder.m */; };
 		A1457A8E19F4E83B001185D9 /* QBaseLocationGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A8B19F4E83B001185D9 /* QBaseLocationGeocoder.m */; };
 		A1457A9419F4E873001185D9 /* FCCurrentLocationGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A9119F4E873001185D9 /* FCCurrentLocationGeocoder.m */; };
@@ -97,6 +102,7 @@
 		A1E95A1C19EE6EB3006B68C2 /* TMMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E959CE19EE6EB3006B68C2 /* TMMemoryCache.m */; };
 		A1E95A1E19EE6F9E006B68C2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E95A1D19EE6F9E006B68C2 /* libz.dylib */; };
 		A1E95A2019EE6FA2006B68C2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E95A1F19EE6FA2006B68C2 /* libsqlite3.dylib */; };
+		A1FF97581A04BD3A00F0845B /* QBaseDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FF97571A04BD3A00F0845B /* QBaseDemoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +131,16 @@
 		A103429919F27F880042EF1C /* QBaseWaterDropRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseWaterDropRefreshTableView.m; sourceTree = "<group>"; };
 		A103429D19F27FB50042EF1C /* ODRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
 		A103429E19F27FB50042EF1C /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
+		A106EEDC1A04CDBA00B4C470 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		A106EEE01A04EB0B00B4C470 /* UIView+DDAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDAddition.h"; sourceTree = "<group>"; };
+		A106EEE11A04EB0B00B4C470 /* UIView+DDAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDAddition.m"; sourceTree = "<group>"; };
+		A106EEE31A04EB2400B4C470 /* QBaseCategoryHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBaseCategoryHeader.h; sourceTree = "<group>"; };
+		A106EEE51A04EBA000B4C470 /* NSDate+DDAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DDAddition.h"; sourceTree = "<group>"; };
+		A106EEE61A04EBA000B4C470 /* NSDate+DDAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DDAddition.m"; sourceTree = "<group>"; };
+		A106EEE91A04EBEA00B4C470 /* NSDictionary+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Safe.h"; sourceTree = "<group>"; };
+		A106EEEA1A04EBEA00B4C470 /* NSDictionary+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Safe.m"; sourceTree = "<group>"; };
+		A106EEED1A04F04C00B4C470 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		A106EEEE1A04F04C00B4C470 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		A1457A8119F4E78A001185D9 /* QBaseViewController+LocationGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QBaseViewController+LocationGeocoder.h"; sourceTree = "<group>"; };
 		A1457A8219F4E78A001185D9 /* QBaseViewController+LocationGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QBaseViewController+LocationGeocoder.m"; sourceTree = "<group>"; };
 		A1457A8A19F4E83B001185D9 /* QBaseLocationGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseLocationGeocoder.h; sourceTree = "<group>"; };
@@ -296,6 +312,9 @@
 		A1E95A1D19EE6F9E006B68C2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A1E95A1F19EE6FA2006B68C2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		A1EF2E4819FB430C00F6B6AF /* QBaseNetOperationURLHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBaseNetOperationURLHeader.h; sourceTree = "<group>"; };
+		A1FF97551A04B7C000F0845B /* QBaseViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBaseViewControllerDelegate.h; sourceTree = "<group>"; };
+		A1FF97561A04BD3A00F0845B /* QBaseDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBaseDemoViewController.h; path = Demo/QBaseDemoViewController.h; sourceTree = "<group>"; };
+		A1FF97571A04BD3A00F0845B /* QBaseDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QBaseDemoViewController.m; path = Demo/QBaseDemoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +391,54 @@
 			path = QBaseFramework/vendor/ODRefreshControl;
 			sourceTree = SOURCE_ROOT;
 		};
+		A106EEDE1A04E98100B4C470 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				A106EEE31A04EB2400B4C470 /* QBaseCategoryHeader.h */,
+				A106EEEC1A04F04C00B4C470 /* NSString */,
+				A106EEE81A04EBEA00B4C470 /* NSDictionary */,
+				A106EEE41A04EBA000B4C470 /* NSDate */,
+				A106EEDF1A04EB0B00B4C470 /* UIView */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		A106EEDF1A04EB0B00B4C470 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				A106EEE01A04EB0B00B4C470 /* UIView+DDAddition.h */,
+				A106EEE11A04EB0B00B4C470 /* UIView+DDAddition.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		A106EEE41A04EBA000B4C470 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				A106EEE51A04EBA000B4C470 /* NSDate+DDAddition.h */,
+				A106EEE61A04EBA000B4C470 /* NSDate+DDAddition.m */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		A106EEE81A04EBEA00B4C470 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				A106EEE91A04EBEA00B4C470 /* NSDictionary+Safe.h */,
+				A106EEEA1A04EBEA00B4C470 /* NSDictionary+Safe.m */,
+			);
+			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		A106EEEC1A04F04C00B4C470 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				A106EEED1A04F04C00B4C470 /* NSString+Additions.h */,
+				A106EEEE1A04F04C00B4C470 /* NSString+Additions.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
 		A1457A8419F4E83B001185D9 /* locationGeocoder */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +462,7 @@
 		A1E958D619EE6E9F006B68C2 = {
 			isa = PBXGroup;
 			children = (
+				A106EEDC1A04CDBA00B4C470 /* 1.png */,
 				A1E9591119EE6EB3006B68C2 /* QBaseFramework */,
 				A1E958E819EE6E9F006B68C2 /* QBaseFrameworkDemo */,
 				A1E9590119EE6E9F006B68C2 /* QBaseFrameworkDemoTests */,
@@ -430,6 +498,8 @@
 			children = (
 				A1E958F119EE6E9F006B68C2 /* QBaseAppDelegate.h */,
 				A1E958F219EE6E9F006B68C2 /* QBaseAppDelegate.m */,
+				A1FF97561A04BD3A00F0845B /* QBaseDemoViewController.h */,
+				A1FF97571A04BD3A00F0845B /* QBaseDemoViewController.m */,
 				A1E958F419EE6E9F006B68C2 /* Images.xcassets */,
 				A1E958E919EE6E9F006B68C2 /* Supporting Files */,
 			);
@@ -504,6 +574,7 @@
 				A1E9591519EE6EB3006B68C2 /* extension */,
 				A1E9591819EE6EB3006B68C2 /* QBaseViewController.h */,
 				A1E9591919EE6EB3006B68C2 /* QBaseViewController.m */,
+				A1FF97551A04B7C000F0845B /* QBaseViewControllerDelegate.h */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -549,6 +620,7 @@
 			isa = PBXGroup;
 			children = (
 				A1E9593E19EE6EB3006B68C2 /* QBaseSystem.h */,
+				A106EEDE1A04E98100B4C470 /* category */,
 				A103429C19F27FB50042EF1C /* ODRefreshControl */,
 				A1E9592419EE6EB3006B68C2 /* cache */,
 				A1E9592619EE6EB3006B68C2 /* database */,
@@ -961,6 +1033,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A106EEDD1A04CDBA00B4C470 /* 1.png in Resources */,
 				A1E958ED19EE6E9F006B68C2 /* InfoPlist.strings in Resources */,
 				A1E958F519EE6E9F006B68C2 /* Images.xcassets in Resources */,
 			);
@@ -1003,13 +1076,16 @@
 				A1E95A1219EE6EB3006B68C2 /* UIImage+GIF.m in Sources */,
 				A1E959F719EE6EB3006B68C2 /* FMResultSet.m in Sources */,
 				A1E95A0519EE6EB3006B68C2 /* Reachability.m in Sources */,
+				A106EEE21A04EB0B00B4C470 /* UIView+DDAddition.m in Sources */,
 				A1E959E819EE6EB3006B68C2 /* FICImageCache.m in Sources */,
 				A1E959DE19EE6EB3006B68C2 /* AFHTTPRequestOperationManager.m in Sources */,
 				A1E959CF19EE6EB3006B68C2 /* QBaseViewController+KeyBoardObserver.m in Sources */,
 				A1E959FA19EE6EB3006B68C2 /* JSONModel.m in Sources */,
 				A1E959FB19EE6EB3006B68C2 /* JSONModelArray.m in Sources */,
 				A1E95A0B19EE6EB3006B68C2 /* SDWebImageCompat.m in Sources */,
+				A1FF97581A04BD3A00F0845B /* QBaseDemoViewController.m in Sources */,
 				A1457A9519F4E873001185D9 /* FCIPAddressGeocoder.m in Sources */,
+				A106EEEB1A04EBEA00B4C470 /* NSDictionary+Safe.m in Sources */,
 				A1E959E219EE6EB3006B68C2 /* AFURLConnectionOperation.m in Sources */,
 				A1E959F619EE6EB3006B68C2 /* FMDatabaseQueue.m in Sources */,
 				A1E959F019EE6EB3006B68C2 /* FLAnimatedImageView.m in Sources */,
@@ -1025,6 +1101,7 @@
 				A1E959E319EE6EB3006B68C2 /* AFURLRequestSerialization.m in Sources */,
 				A1E95A0119EE6EB3006B68C2 /* JSONModel+networking.m in Sources */,
 				A1E959D419EE6EB3006B68C2 /* NSDictionary+OperationURL.m in Sources */,
+				A106EEE71A04EBA000B4C470 /* NSDate+DDAddition.m in Sources */,
 				A1E959F319EE6EB3006B68C2 /* FMDatabase.m in Sources */,
 				A1E959FE19EE6EB3006B68C2 /* NSArray+JSONModel.m in Sources */,
 				A1E959DF19EE6EB3006B68C2 /* AFHTTPSessionManager.m in Sources */,
@@ -1057,6 +1134,7 @@
 				A1E959E419EE6EB3006B68C2 /* AFURLResponseSerialization.m in Sources */,
 				A1E95A1719EE6EB3006B68C2 /* UIView+WebCacheOperation.m in Sources */,
 				A1E959ED19EE6EB3006B68C2 /* FICUtilities.m in Sources */,
+				A106EEEF1A04F04C00B4C470 /* NSString+Additions.m in Sources */,
 				A1E959D919EE6EB3006B68C2 /* QBaseRequest.m in Sources */,
 				A1E959F519EE6EB3006B68C2 /* FMDatabasePool.m in Sources */,
 			);
@@ -1177,10 +1255,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: shilong sang (9T3353N28G)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QBaseFrameworkDemo/QBaseFrameworkDemo-Prefix.pch";
 				INFOPLIST_FILE = "QBaseFrameworkDemo/QBaseFrameworkDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "704CE6A8-10D7-42D3-93C7-91790A0B384B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1190,10 +1270,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: shilong sang (9T3353N28G)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QBaseFrameworkDemo/QBaseFrameworkDemo-Prefix.pch";
 				INFOPLIST_FILE = "QBaseFrameworkDemo/QBaseFrameworkDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "704CE6A8-10D7-42D3-93C7-91790A0B384B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
