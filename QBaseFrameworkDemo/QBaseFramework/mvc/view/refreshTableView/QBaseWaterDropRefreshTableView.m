@@ -27,14 +27,25 @@
 
 - (void)dropViewDidBeginRefreshing:(ODRefreshControl *)refreshControl
 {
-    if (self.qbase_delegate && [self.qbase_delegate respondsToSelector:@selector(tableViewBegainRefresh:)]) {
-        [self.qbase_delegate performSelector:@selector(tableViewBegainRefresh:) withObject:self];
+    if (self.qbase_delegate && [self.qbase_delegate respondsToSelector:@selector(tableViewDidBegainRefresh:)]) {
+        [self.qbase_delegate tableViewDidBegainRefresh:self];
     }
 }
 
 - (void)endRefreshing
 {
-    [self.refreshControl performSelector:@selector(endRefreshing) withObject:nil afterDelay:1.0f];
+    [self performSelector:@selector(prepareForEndingRefresh)
+               withObject:nil
+               afterDelay:1.0];
+}
+
+- (void)prepareForEndingRefresh
+{
+    [self.refreshControl endRefreshing];
+    
+    if (self.qbase_delegate && [self.qbase_delegate respondsToSelector:@selector(tableViewDidFinishRefresh:)]) {
+        [self.qbase_delegate tableViewDidFinishRefresh:self];
+    }
 }
 
 @end

@@ -10,9 +10,14 @@
 
 @class QBaseTableView;
 @protocol QBaseTableViewDelegate <NSObject>
-
-- (void)tableViewBegainRefresh:(QBaseTableView *)tableView;
-
+/**
+ *  开始刷新页面回调
+ */
+- (void)tableViewDidBegainRefresh:(QBaseTableView *)tableView;
+/**
+ *  结束刷新页面回调
+ */
+- (void)tableViewDidFinishRefresh:(QBaseTableView *)tableView;
 @end
 
 @interface QBaseTableView : UITableView
@@ -22,7 +27,7 @@
 @property (nonatomic, assign) id<QBaseTableViewDelegate> qbase_delegate;
 
 /**
- *  结束刷新
+ *  结束刷新状态
  */
 - (void)endRefreshing;
 

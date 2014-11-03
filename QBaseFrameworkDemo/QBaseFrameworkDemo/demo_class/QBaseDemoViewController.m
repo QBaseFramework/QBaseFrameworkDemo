@@ -16,7 +16,7 @@
 
 - (void)createUI
 {
-    UITextView *tv = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    UITextView *tv = [[UITextView alloc] initWithFrame:CGRectMake(0, 66, 100, 100)];
     tv.layer.borderColor = [[UIColor darkGrayColor] CGColor];
     tv.layer.borderWidth = 1.0f;
     [self.view addSubview:tv];

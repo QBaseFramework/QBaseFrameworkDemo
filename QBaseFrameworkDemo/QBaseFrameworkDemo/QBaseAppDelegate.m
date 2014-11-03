@@ -7,7 +7,7 @@
 //
 
 #import "QBaseAppDelegate.h"
-#import "QBaseDemoViewController.h"
+#import "QBaseListViewController.h"
 
 @implementation QBaseAppDelegate
 
@@ -17,12 +17,10 @@
     
     [[QBaseNetworkObserver sharedQBaseNetworkObserver] startNotifier];
 
-    
-    
-
-    
     // Override point for customization after application launch.
-    self.window.rootViewController = [[QBaseDemoViewController alloc] init];
+    QBaseViewController *vc = [[QBaseListViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
