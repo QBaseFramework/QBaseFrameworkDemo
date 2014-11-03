@@ -24,6 +24,10 @@
 		A106EEFD1A071D2E00B4C470 /* QBaseDemoTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A106EEFC1A071D2E00B4C470 /* QBaseDemoTableView.m */; };
 		A106EF001A071E9C00B4C470 /* QBaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A106EEFF1A071E9C00B4C470 /* QBaseListViewController.m */; };
 		A106EF021A07223C00B4C470 /* VC.plist in Resources */ = {isa = PBXBuildFile; fileRef = A106EF011A07223C00B4C470 /* VC.plist */; };
+		A106EF061A0725BA00B4C470 /* QBaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A106EF051A0725BA00B4C470 /* QBaseScrollView.m */; };
+		A106EF091A0725D700B4C470 /* QBaseAnimateScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A106EF081A0725D700B4C470 /* QBaseAnimateScrollView.m */; };
+		A106EF0C1A07275A00B4C470 /* QBaseAnimateScrollViewElement.m in Sources */ = {isa = PBXBuildFile; fileRef = A106EF0B1A07275A00B4C470 /* QBaseAnimateScrollViewElement.m */; };
+		A106EF0F1A0729A200B4C470 /* QBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A106EF0E1A0729A200B4C470 /* QBaseView.m */; };
 		A1457A8319F4E78A001185D9 /* QBaseViewController+LocationGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A8219F4E78A001185D9 /* QBaseViewController+LocationGeocoder.m */; };
 		A1457A8E19F4E83B001185D9 /* QBaseLocationGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A8B19F4E83B001185D9 /* QBaseLocationGeocoder.m */; };
 		A1457A9419F4E873001185D9 /* FCCurrentLocationGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A9119F4E873001185D9 /* FCCurrentLocationGeocoder.m */; };
@@ -154,6 +158,14 @@
 		A106EEFE1A071E9C00B4C470 /* QBaseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseListViewController.h; sourceTree = "<group>"; };
 		A106EEFF1A071E9C00B4C470 /* QBaseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseListViewController.m; sourceTree = "<group>"; };
 		A106EF011A07223C00B4C470 /* VC.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = VC.plist; sourceTree = "<group>"; };
+		A106EF041A0725BA00B4C470 /* QBaseScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseScrollView.h; sourceTree = "<group>"; };
+		A106EF051A0725BA00B4C470 /* QBaseScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseScrollView.m; sourceTree = "<group>"; };
+		A106EF071A0725D700B4C470 /* QBaseAnimateScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseAnimateScrollView.h; sourceTree = "<group>"; };
+		A106EF081A0725D700B4C470 /* QBaseAnimateScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseAnimateScrollView.m; sourceTree = "<group>"; };
+		A106EF0A1A07275A00B4C470 /* QBaseAnimateScrollViewElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseAnimateScrollViewElement.h; sourceTree = "<group>"; };
+		A106EF0B1A07275A00B4C470 /* QBaseAnimateScrollViewElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseAnimateScrollViewElement.m; sourceTree = "<group>"; };
+		A106EF0D1A0729A200B4C470 /* QBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseView.h; sourceTree = "<group>"; };
+		A106EF0E1A0729A200B4C470 /* QBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseView.m; sourceTree = "<group>"; };
 		A1457A8119F4E78A001185D9 /* QBaseViewController+LocationGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QBaseViewController+LocationGeocoder.h"; sourceTree = "<group>"; };
 		A1457A8219F4E78A001185D9 /* QBaseViewController+LocationGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QBaseViewController+LocationGeocoder.m"; sourceTree = "<group>"; };
 		A1457A8A19F4E83B001185D9 /* QBaseLocationGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseLocationGeocoder.h; sourceTree = "<group>"; };
@@ -463,6 +475,20 @@
 			path = demo_class;
 			sourceTree = "<group>";
 		};
+		A106EF031A07257700B4C470 /* headerScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				A106EF041A0725BA00B4C470 /* QBaseScrollView.h */,
+				A106EF051A0725BA00B4C470 /* QBaseScrollView.m */,
+				A106EF071A0725D700B4C470 /* QBaseAnimateScrollView.h */,
+				A106EF081A0725D700B4C470 /* QBaseAnimateScrollView.m */,
+				A106EF0A1A07275A00B4C470 /* QBaseAnimateScrollViewElement.h */,
+				A106EF0B1A07275A00B4C470 /* QBaseAnimateScrollViewElement.m */,
+			);
+			name = headerScrollView;
+			path = headerScrollerView;
+			sourceTree = "<group>";
+		};
 		A1457A8419F4E83B001185D9 /* locationGeocoder */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,6 +656,9 @@
 		A1E9591E19EE6EB3006B68C2 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				A106EF0D1A0729A200B4C470 /* QBaseView.h */,
+				A106EF0E1A0729A200B4C470 /* QBaseView.m */,
+				A106EF031A07257700B4C470 /* headerScrollView */,
 				A103429519F27F880042EF1C /* refreshTableView */,
 			);
 			path = view;
@@ -1085,6 +1114,7 @@
 				A1E95A0F19EE6EB3006B68C2 /* SDWebImageManager.m in Sources */,
 				A1E959EA19EE6EB3006B68C2 /* FICImageTable.m in Sources */,
 				A1E95A1019EE6EB3006B68C2 /* SDWebImagePrefetcher.m in Sources */,
+				A106EF061A0725BA00B4C470 /* QBaseScrollView.m in Sources */,
 				A1E959EF19EE6EB3006B68C2 /* FLAnimatedImage.m in Sources */,
 				A106EEFD1A071D2E00B4C470 /* QBaseDemoTableView.m in Sources */,
 				A1E95A1419EE6EB3006B68C2 /* UIImage+WebP.m in Sources */,
@@ -1104,12 +1134,14 @@
 				A1E95A1219EE6EB3006B68C2 /* UIImage+GIF.m in Sources */,
 				A1E959F719EE6EB3006B68C2 /* FMResultSet.m in Sources */,
 				A1E95A0519EE6EB3006B68C2 /* Reachability.m in Sources */,
+				A106EF091A0725D700B4C470 /* QBaseAnimateScrollView.m in Sources */,
 				A106EEE21A04EB0B00B4C470 /* UIView+DDAddition.m in Sources */,
 				A1E959E819EE6EB3006B68C2 /* FICImageCache.m in Sources */,
 				A1E959DE19EE6EB3006B68C2 /* AFHTTPRequestOperationManager.m in Sources */,
 				A1E959CF19EE6EB3006B68C2 /* QBaseViewController+KeyBoardObserver.m in Sources */,
 				A1E959FA19EE6EB3006B68C2 /* JSONModel.m in Sources */,
 				A1E959FB19EE6EB3006B68C2 /* JSONModelArray.m in Sources */,
+				A106EF0F1A0729A200B4C470 /* QBaseView.m in Sources */,
 				A1E95A0B19EE6EB3006B68C2 /* SDWebImageCompat.m in Sources */,
 				A1457A9519F4E873001185D9 /* FCIPAddressGeocoder.m in Sources */,
 				A106EEEB1A04EBEA00B4C470 /* NSDictionary+Safe.m in Sources */,
@@ -1165,6 +1197,7 @@
 				A1E959ED19EE6EB3006B68C2 /* FICUtilities.m in Sources */,
 				A106EEEF1A04F04C00B4C470 /* NSString+Additions.m in Sources */,
 				A106EEFA1A071C7A00B4C470 /* QBaseRefreshViewController.m in Sources */,
+				A106EF0C1A07275A00B4C470 /* QBaseAnimateScrollViewElement.m in Sources */,
 				A1E959D919EE6EB3006B68C2 /* QBaseRequest.m in Sources */,
 				A1E959F519EE6EB3006B68C2 /* FMDatabasePool.m in Sources */,
 			);

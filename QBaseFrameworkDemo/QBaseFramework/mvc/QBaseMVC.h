@@ -9,6 +9,10 @@
 #ifndef QBaseFramework_QBaseMVC_h
 #define QBaseFramework_QBaseMVC_h
 
+// QBaseView
+#import "QBaseView.h"
+
+
 // Model
 #import "QBaseModel.h"
 

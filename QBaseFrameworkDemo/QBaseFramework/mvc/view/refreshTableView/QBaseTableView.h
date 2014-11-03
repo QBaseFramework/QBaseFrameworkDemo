@@ -22,6 +22,7 @@
 
 @interface QBaseTableView : UITableView
 {
+    
 }
 
 @property (nonatomic, assign) id<QBaseTableViewDelegate> qbase_delegate;
