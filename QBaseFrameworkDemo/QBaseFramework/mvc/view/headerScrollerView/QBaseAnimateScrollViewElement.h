@@ -9,5 +9,18 @@
 #import "QBaseView.h"
 
 @interface QBaseAnimateScrollViewElement : QBaseView
+{
+
+}
+@property (nonatomic, strong) QBaseModel *dataModel;
+
+/**
+ *  初始化对象
+ *
+ *  @param usedXIB 是否通过XIB
+ *
+ *  @return 返回初始化对象
+ */
+- (instancetype)initUsedXIB:(BOOL)usedXIB;
 
 @end

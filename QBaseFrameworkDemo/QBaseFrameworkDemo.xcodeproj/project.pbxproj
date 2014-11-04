@@ -32,6 +32,9 @@
 		A1457A8E19F4E83B001185D9 /* QBaseLocationGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A8B19F4E83B001185D9 /* QBaseLocationGeocoder.m */; };
 		A1457A9419F4E873001185D9 /* FCCurrentLocationGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A9119F4E873001185D9 /* FCCurrentLocationGeocoder.m */; };
 		A1457A9519F4E873001185D9 /* FCIPAddressGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A9319F4E873001185D9 /* FCIPAddressGeocoder.m */; };
+		A1665A961A087D8A001A7482 /* QBaseNewsElement.m in Sources */ = {isa = PBXBuildFile; fileRef = A1665A951A087D8A001A7482 /* QBaseNewsElement.m */; };
+		A1665A991A087D98001A7482 /* QBaseNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1665A981A087D98001A7482 /* QBaseNewsModel.m */; };
+		A1665A9B1A087DB2001A7482 /* QBaseNewsElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1665A9A1A087DB2001A7482 /* QBaseNewsElement.xib */; };
 		A1E958E319EE6E9F006B68C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E958E219EE6E9F006B68C2 /* Foundation.framework */; };
 		A1E958E519EE6E9F006B68C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E958E419EE6E9F006B68C2 /* CoreGraphics.framework */; };
 		A1E958E719EE6E9F006B68C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E958E619EE6E9F006B68C2 /* UIKit.framework */; };
@@ -174,6 +177,11 @@
 		A1457A9119F4E873001185D9 /* FCCurrentLocationGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCCurrentLocationGeocoder.m; sourceTree = "<group>"; };
 		A1457A9219F4E873001185D9 /* FCIPAddressGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCIPAddressGeocoder.h; sourceTree = "<group>"; };
 		A1457A9319F4E873001185D9 /* FCIPAddressGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCIPAddressGeocoder.m; sourceTree = "<group>"; };
+		A1665A941A087D8A001A7482 /* QBaseNewsElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseNewsElement.h; sourceTree = "<group>"; };
+		A1665A951A087D8A001A7482 /* QBaseNewsElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseNewsElement.m; sourceTree = "<group>"; };
+		A1665A971A087D98001A7482 /* QBaseNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseNewsModel.h; sourceTree = "<group>"; };
+		A1665A981A087D98001A7482 /* QBaseNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseNewsModel.m; sourceTree = "<group>"; };
+		A1665A9A1A087DB2001A7482 /* QBaseNewsElement.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QBaseNewsElement.xib; sourceTree = "<group>"; };
 		A1E958DF19EE6E9F006B68C2 /* QBaseFrameworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QBaseFrameworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E958E219EE6E9F006B68C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1E958E419EE6E9F006B68C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -471,6 +479,11 @@
 				A106EEF81A071C7A00B4C470 /* QBaseRefreshViewController.m */,
 				A106EEFB1A071D2E00B4C470 /* QBaseDemoTableView.h */,
 				A106EEFC1A071D2E00B4C470 /* QBaseDemoTableView.m */,
+				A1665A971A087D98001A7482 /* QBaseNewsModel.h */,
+				A1665A981A087D98001A7482 /* QBaseNewsModel.m */,
+				A1665A941A087D8A001A7482 /* QBaseNewsElement.h */,
+				A1665A951A087D8A001A7482 /* QBaseNewsElement.m */,
+				A1665A9A1A087DB2001A7482 /* QBaseNewsElement.xib */,
 			);
 			path = demo_class;
 			sourceTree = "<group>";
@@ -1089,6 +1102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A106EEDD1A04CDBA00B4C470 /* 1.png in Resources */,
+				A1665A9B1A087DB2001A7482 /* QBaseNewsElement.xib in Resources */,
 				A1E958ED19EE6E9F006B68C2 /* InfoPlist.strings in Resources */,
 				A1E958F519EE6E9F006B68C2 /* Images.xcassets in Resources */,
 				A106EF021A07223C00B4C470 /* VC.plist in Resources */,
@@ -1143,6 +1157,7 @@
 				A1E959FB19EE6EB3006B68C2 /* JSONModelArray.m in Sources */,
 				A106EF0F1A0729A200B4C470 /* QBaseView.m in Sources */,
 				A1E95A0B19EE6EB3006B68C2 /* SDWebImageCompat.m in Sources */,
+				A1665A991A087D98001A7482 /* QBaseNewsModel.m in Sources */,
 				A1457A9519F4E873001185D9 /* FCIPAddressGeocoder.m in Sources */,
 				A106EEEB1A04EBEA00B4C470 /* NSDictionary+Safe.m in Sources */,
 				A1E959E219EE6EB3006B68C2 /* AFURLConnectionOperation.m in Sources */,
@@ -1193,6 +1208,7 @@
 				A1E95A0A19EE6EB3006B68C2 /* SDImageCache.m in Sources */,
 				A103429A19F27F880042EF1C /* QBaseTableView.m in Sources */,
 				A1E959E419EE6EB3006B68C2 /* AFURLResponseSerialization.m in Sources */,
+				A1665A961A087D8A001A7482 /* QBaseNewsElement.m in Sources */,
 				A1E95A1719EE6EB3006B68C2 /* UIView+WebCacheOperation.m in Sources */,
 				A1E959ED19EE6EB3006B68C2 /* FICUtilities.m in Sources */,
 				A106EEEF1A04F04C00B4C470 /* NSString+Additions.m in Sources */,

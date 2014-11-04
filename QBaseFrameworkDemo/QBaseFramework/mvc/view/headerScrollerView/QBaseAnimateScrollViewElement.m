@@ -10,6 +10,19 @@
 
 @implementation QBaseAnimateScrollViewElement
 
+- (instancetype)initUsedXIB:(BOOL)usedXIB
+{
+    
+    if (usedXIB) {
+        return [[self class] initViewFromXIB];
+    }
+    
+    return [[[self class] alloc] init];
+}
 
+
+- (void)setDataModel:(QBaseModel *)dataModel
+{    
+}
 
 @end

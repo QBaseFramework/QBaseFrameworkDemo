@@ -7,9 +7,12 @@
 //
 
 #import "QBaseRefreshViewController.h"
+#import "QBaseNewsModel.h"
 
 @interface QBaseRefreshViewController ()
-
+{
+    NSMutableArray *_dataArray;
+}
 @end
 
 @implementation QBaseRefreshViewController
@@ -26,37 +29,36 @@
     [self.view addSubview:t];
 
     QBaseAnimateScrollView *scrollView = [[QBaseAnimateScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 300)];
-    scrollView.qbase_dataSource = self;
+    scrollView.animateInterval = 0;
     scrollView.qbase_delegate = self;
     t.tableHeaderView = scrollView;
-}
-
-#pragma mark -
-#pragma mark QBaseScrollViewDataSource
-
-- (NSInteger)numberOfPageInScrollView:(QBaseAnimateScrollView *)scrollView
-{
-    return 5;
-}
-
-- (QBaseAnimateScrollViewElement *)scrollView:(QBaseAnimateScrollView *)scrollView elementForCurrentIndex:(NSInteger)currentIndex
-{
-    QBaseAnimateScrollViewElement *e = [[QBaseAnimateScrollViewElement alloc] init];
-    e.backgroundColor = currentIndex%2 == 0 ? [UIColor blackColor] : [UIColor redColor];
-    return e;
+    
+    NSMutableArray *arr = [NSMutableArray new];
+    for (int i = 0; i < 3; i++) {
+        
+        QBaseNewsModel *newsModel = [[QBaseNewsModel alloc] init];
+        
+        newsModel.title = [NSString stringWithFormat:@"%d", i];
+        newsModel.imgPath = @"http://pic.nipic.com/2007-12-28/20071228114234633_2.jpg";
+        
+        [arr addObject:newsModel];
+    }
+    
+    scrollView.dataArray = arr;
+    [scrollView reloadData];
 }
 
 #pragma mark -
 #pragma mark QBaseScrollViewDelegate
 
-- (void)scrollView:(QBaseAnimateScrollView *)scrollView didChangedCurrentPage:(NSInteger)currentPage
+- (void)scrollView:(QBaseAnimateScrollView *)scrollView didChangedCurrentIndex:(NSInteger)index
 {
-    NSLog(@"页码发生变化, 最新一页为%d", currentPage);
+    NSLog(@"页码发生变化, 最新一页为%ld", index);
 }
 
 - (void)scrollView:(QBaseAnimateScrollView *)scrollView didSelectElementViewWithIndex:(NSInteger)index
 {
-    NSLog(@"元素被点击, 点击元素为第%d页", index);
+    NSLog(@"元素被点击, 点击元素为第%ld页", index);
 }
 
 #pragma mark -

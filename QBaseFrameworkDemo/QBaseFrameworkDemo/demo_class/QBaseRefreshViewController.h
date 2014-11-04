@@ -11,6 +11,6 @@
 #import "QBaseAnimateScrollView.h"
 #import "QBaseAnimateScrollViewElement.h"
 
-@interface QBaseRefreshViewController : QBaseViewController<QBaseTableViewDelegate, QBaseAnimateScrollViewDataSource, QBaseAnimateScrollViewDelegate>
+@interface QBaseRefreshViewController : QBaseViewController<QBaseTableViewDelegate, QBaseAnimateScrollViewDelegate>
 
 @end

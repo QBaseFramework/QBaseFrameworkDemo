@@ -10,18 +10,6 @@
 #import "QBaseAnimateScrollViewElement.h"
 
 @class QBaseAnimateScrollView;
-@protocol QBaseAnimateScrollViewDataSource <NSObject>
-
-@required
-/**
- *  一共填充多少张图片
- */
-- (NSInteger)numberOfPageInScrollView:(QBaseAnimateScrollView *)scrollView;
-/**
- *  填充数据
- */
-- (QBaseAnimateScrollViewElement *)scrollView:(QBaseAnimateScrollView *)scrollView elementForCurrentIndex:(NSInteger)currentIndex;
-@end;
 
 @protocol QBaseAnimateScrollViewDelegate<NSObject>
 @optional
@@ -33,8 +21,7 @@
 /**
  *  滚动视图当前视图发生切换回调
  */
-- (void)scrollView:(QBaseAnimateScrollView *)scrollView didChangedCurrentPage:(NSInteger)currentPage;
-
+- (void)scrollView:(QBaseAnimateScrollView *)scrollView didChangedCurrentIndex:(NSInteger)currentIndex;
 @end
 
 @interface QBaseAnimateScrollView : QBaseScrollView<UIScrollViewDelegate>
@@ -44,10 +31,12 @@
     
     NSInteger _page;
 }
+
 /**
- *  数据代理
+ *  数据源
  */
-@property (nonatomic, assign) id<QBaseAnimateScrollViewDataSource> qbase_dataSource;
+@property (nonatomic, strong) NSArray *dataArray;
+
 /**
  *  行为代理
  */
@@ -57,5 +46,28 @@
  *  刷新数据源
  */
 - (void)reloadData;
+
+#pragma mark -
+#pragma marl 轮播动画
+
+/**
+ *  动画间隔时间
+ */
+@property (nonatomic, assign) NSTimeInterval animateInterval;
+
+/**
+ *  是否正在轮播
+ */
+@property (nonatomic, assign, readonly) BOOL isAnimate;
+
+/**
+ *  开始动画
+ */
+- (void)startAnimate;
+
+/**
+ *  关闭动画
+ */
+- (void)stopAnimate;
 
 @end
