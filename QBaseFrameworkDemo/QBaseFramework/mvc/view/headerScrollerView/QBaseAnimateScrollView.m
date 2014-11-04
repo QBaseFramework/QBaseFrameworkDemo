@@ -45,37 +45,36 @@
     NSInteger currentIndex;
     
     CGRect frame = self.bounds;
-    for (int i = 0; i < [self numberOfPages]+2; i++) {
+    
+    NSInteger numberOfPages = (self.isLoop)?
+                                            ([self numberOfPages]+2):
+                                            ([self numberOfPages]);
+    
+    for (int i = 0; i < numberOfPages; i++) {
         
         // 修正坐标
         frame.origin.x = i*CGRectGetWidth(self.bounds);
         
-        if (i == 0)
+        if (i == 0 && self.isLoop)
             currentIndex = [self numberOfPages];
-        else if (i == [self numberOfPages]+1)
+        else if (i == [self numberOfPages]+1 && self.isLoop)
             currentIndex = 1;
         else
             currentIndex = i;
         
-        currentIndex--;
+        if (self.isLoop) {
+            currentIndex--;
+        }
         
         // 通过Model, 获取Element的ClassName
-        
-        Class class = [[_dataArray objectAtIndex:currentIndex] class];
-        
-        NSString *modelClassName = NSStringFromClass(class);
-        
-        NSString *elementClassName = [modelClassName stringByReplacingOccurrencesOfString:@"Model" withString:@"Element"];
-        
-        Class ElementClass = NSClassFromString(elementClassName);
-        
+        Class ElementClass = [self getElementClassFromModel:[_dataArray objectAtIndex:currentIndex]];
         
         // 添加元素
-        QBaseAnimateScrollViewElement *element = [[ElementClass alloc] initUsedXIB:YES];
+        QBaseAnimateScrollViewElement *element = [[ElementClass alloc] initUsedXIB:self.usedXIB];
         element.dataModel = [_dataArray objectAtIndex:currentIndex];
         element.frame = frame;
         [self addSubview:element];
-        self.contentSize = CGSizeMake(self.width * ([self numberOfPages]+2),
+        self.contentSize = CGSizeMake(self.width * numberOfPages,
                                       self.height);
         element.tag = currentIndex;
 
@@ -85,7 +84,9 @@
         [element addGestureRecognizer:tapRecognizer];
     }
     
-    self.contentOffset = CGPointMake(self.width, 0);
+    self.contentOffset = self.isLoop ?
+                                      CGPointMake(self.width, 0):
+                                      CGPointMake(0, 0);
 }
 
 - (void)tapRecognizerEvent:(UITapGestureRecognizer *)tapRecognizer
@@ -118,6 +119,26 @@
     return currentPage;
 }
 
+/**
+ *  通过Model, 获取Element的ClassName
+ *
+ *  @param baseModel 数据模型
+ *
+ *  @return 对应Element的Class
+ */
+- (Class)getElementClassFromModel:(id)baseModel
+{
+    Class class = [baseModel class];
+    
+    NSString *modelClassName = NSStringFromClass(class);
+    
+    NSString *elementClassName = [modelClassName stringByReplacingOccurrencesOfString:@"Model" withString:@"Element"];
+    
+    Class ElementClass = NSClassFromString(elementClassName);
+    
+    return ElementClass;
+}
+
 #pragma mark -
 #pragma mark Setting
 
@@ -125,8 +146,10 @@
 {
     _page = page;
     
-    CGPoint offset = CGPointMake(self.width * _page, 0);
-    [self setContentOffset:offset animated:YES];
+    if (self.isLoop) {
+        CGPoint offset = CGPointMake(self.width * _page, 0);
+        [self setContentOffset:offset animated:YES];
+    }
 }
 
 #pragma mark -
@@ -137,7 +160,9 @@
     // 最新页码
     NSInteger offsetPage = scrollView.contentOffset.x / self.width;
     
-    NSInteger currentPage = [self adjustNumberOfPage:offsetPage];
+    NSInteger currentPage = self.isLoop?
+                                        [self adjustNumberOfPage:offsetPage]:
+                                        offsetPage;
     
     if (currentPage == _page) {
         return;
@@ -152,6 +177,10 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    if (!self.isLoop) {
+        return;
+    }
+    
     CGFloat offsetX = scrollView.contentOffset.x;
 
     if (offsetX < self.width) {
@@ -173,6 +202,9 @@
 
 - (void)setAnimateInterval:(NSTimeInterval)animateInterval
 {
+    if (!self.isLoop) {
+        return;
+    }
     
     if (animateInterval == 0) {
         [_timer invalidate];
@@ -212,7 +244,7 @@
 
 - (void)startAnimate
 {
-    if (_timer) {
+    if (_timer && self.isLoop) {
         _isAnimate = YES;
         [_timer setFireDate:[NSDate distantPast]];
     }
@@ -220,7 +252,7 @@
 
 - (void)stopAnimate
 {
-    if (_timer) {
+    if (_timer && self.isLoop) {
         _isAnimate = NO;
         [_timer setFireDate:[NSDate distantFuture]];
     }

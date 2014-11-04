@@ -28,10 +28,16 @@
     t.qbase_delegate = self;
     [self.view addSubview:t];
 
+    
+    
     QBaseAnimateScrollView *scrollView = [[QBaseAnimateScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 300)];
-    scrollView.animateInterval = 0;
+    scrollView.usedXIB = YES;
+    scrollView.isLoop = YES;
+    scrollView.animateInterval = 2;
     scrollView.qbase_delegate = self;
     t.tableHeaderView = scrollView;
+    
+    
     
     NSMutableArray *arr = [NSMutableArray new];
     for (int i = 0; i < 3; i++) {

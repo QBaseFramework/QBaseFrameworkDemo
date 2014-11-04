@@ -38,6 +38,16 @@
 @property (nonatomic, strong) NSArray *dataArray;
 
 /**
+ *  元素是否使用XIB生成
+ */
+@property (nonatomic, assign) BOOL usedXIB;
+
+/**
+ *  是否循环播放
+ */
+@property (nonatomic, assign) BOOL isLoop;
+
+/**
  *  行为代理
  */
 @property (nonatomic, assign) id<QBaseAnimateScrollViewDelegate> qbase_delegate;
