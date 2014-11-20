@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface QBaseUserInfo : NSObject
-DEFINE_SINGLETON_FOR_HEADER(QBaseUserInfo)
+Q_DEFINE_SINGLETON_FOR_HEADER(QBaseUserInfo)
 
 /**
  *  是否首次登陆

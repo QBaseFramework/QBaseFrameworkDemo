@@ -13,7 +13,7 @@ typedef void (^QBaseRequestBodyBlock) (id<AFMultipartFormData> formData);
 typedef void (^QBaseRequestCompleteBlock) ( id result, NSError *err);
 
 @interface QBaseRequest : AFHTTPRequestOperationManager
-DEFINE_SINGLETON_FOR_HEADER(QBaseRequest)
+Q_DEFINE_SINGLETON_FOR_HEADER(QBaseRequest)
 
 /**
  *  GET请求

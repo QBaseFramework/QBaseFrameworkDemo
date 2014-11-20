@@ -11,6 +11,6 @@
 #define DEFAULE_DB_PATH [NSString stringWithFormat:@"%@/Documents/data.db", NSHomeDirectory()]
 
 @interface QBaseDatabase : FMDatabaseQueue
-DEFINE_SINGLETON_FOR_HEADER(QBaseDatabase)
+Q_DEFINE_SINGLETON_FOR_HEADER(QBaseDatabase)
 
 @end

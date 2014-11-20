@@ -24,7 +24,7 @@ typedef enum QBaseNetStatus {
 {
     Reachability *_reach;
 }
-DEFINE_SINGLETON_FOR_HEADER(QBaseNetworkObserver)
+Q_DEFINE_SINGLETON_FOR_HEADER(QBaseNetworkObserver)
 
 /**
  *  当前网络状态

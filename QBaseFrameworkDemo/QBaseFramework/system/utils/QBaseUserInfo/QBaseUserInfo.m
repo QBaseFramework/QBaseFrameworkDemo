@@ -11,7 +11,7 @@
 #define QBASE_USER_INFO_KEY @"QBASE_USER_INFO_KEY"
 
 @implementation QBaseUserInfo
-DEFINE_SINGLETON_FOR_CLASS(QBaseUserInfo)
+Q_DEFINE_SINGLETON_FOR_CLASS(QBaseUserInfo)
 
 /**
  *  是否首次登陆

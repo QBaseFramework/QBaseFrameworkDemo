@@ -9,7 +9,7 @@
 #import "QBaseNetworkObserver.h"
 
 @implementation QBaseNetworkObserver
-DEFINE_SINGLETON_FOR_CLASS(QBaseNetworkObserver)
+Q_DEFINE_SINGLETON_FOR_CLASS(QBaseNetworkObserver)
 
 - (id)init
 {

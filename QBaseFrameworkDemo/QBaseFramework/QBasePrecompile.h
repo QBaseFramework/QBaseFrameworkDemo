@@ -12,13 +12,13 @@
 /**
  *  单例宏定义 （方法一）
  */
-#define DEFINE_SINGLETON_FOR_HEADER(className) \
+#define Q_DEFINE_SINGLETON_FOR_HEADER(className) \
 \
 + (className *)shared##className;
 
 //#if (!__has_feature(objc_arc)) \
 //todo:把【aa new】也放到里面
-#define DEFINE_SINGLETON_FOR_CLASS(className) \
+#define Q_DEFINE_SINGLETON_FOR_CLASS(className) \
 \
 + (className *)shared##className { \
 static className *shared##className = nil; \
@@ -27,23 +27,6 @@ dispatch_once(&onceToken, ^{ \
 shared##className = [[self alloc] init]; \
 }); \
 return shared##className; \
-}
-
-/**
- *  单例宏定义 （方法二）
- */
-#undef	AS_SINGLETON
-#define AS_SINGLETON( __class ) \
-+ (__class *)instance;
-
-#undef	DEF_SINGLETON
-#define DEF_SINGLETON( __class ) \
-+ (__class *)instance \
-{ \
-static dispatch_once_t once; \
-static __class * __singleton__; \
-dispatch_once( &once, ^{ __singleton__ = [[__class alloc] init]; } ); \
-return __singleton__; \
 }
 
 /**

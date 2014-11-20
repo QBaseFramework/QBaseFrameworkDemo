@@ -9,7 +9,7 @@
 #import "QBaseRequest.h"
 
 @implementation QBaseRequest
-DEFINE_SINGLETON_FOR_CLASS(QBaseRequest)
+Q_DEFINE_SINGLETON_FOR_CLASS(QBaseRequest)
 
 - (void)GET:(NSString *)url params:(NSDictionary *)params complete:(QBaseRequestCompleteBlock)completeBlock
 {
