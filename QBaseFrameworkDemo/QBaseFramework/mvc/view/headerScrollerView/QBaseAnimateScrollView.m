@@ -258,4 +258,38 @@
     }
 }
 
+#pragma mark -
+#pragma mark NetOperation
+
+- (void)loadFromOperation:(QBaseNetOperation *)operation params:(NSDictionary *)params operationComplete:(QBaseHTTPCompleteBlock)httpCompleteBlock
+{
+    _httpCompleteBlock = [httpCompleteBlock copy];
+    
+    operation.delegate = self;
+    operation.params = params;
+    [operation start];
+}
+
+- (NSArray *)parseResponseData:(QBaseNetOperation *)operation
+{
+    return operation.dataArray;
+}
+
+- (void)netOperationDidFinish:(QBaseNetOperation *)operation
+{
+    self.dataArray = [self parseResponseData:operation];
+    [self reloadData];
+    
+    if (_httpCompleteBlock) {
+        _httpCompleteBlock(operation);
+    }
+}
+
+- (void)netOperationDidFailed:(QBaseNetOperation *)operation
+{
+    if (_httpCompleteBlock) {
+        _httpCompleteBlock(operation);
+    }
+}
+
 @end

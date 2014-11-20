@@ -14,8 +14,8 @@
 {
     QBaseNewsModel *newsModel = (QBaseNewsModel *)dataModel;
 
-    self.titleLabel.text = newsModel.title;
-    [self.img loadImageWithURL:newsModel.imgPath];
+    self.titleLabel.text = newsModel.imageName;
+    [self.img loadImageWithURL:newsModel.path];
 }
 
 @end

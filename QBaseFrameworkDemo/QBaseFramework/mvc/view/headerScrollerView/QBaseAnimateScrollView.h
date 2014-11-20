@@ -24,12 +24,14 @@
 - (void)scrollView:(QBaseAnimateScrollView *)scrollView didChangedCurrentIndex:(NSInteger)currentIndex;
 @end
 
-@interface QBaseAnimateScrollView : QBaseScrollView<UIScrollViewDelegate>
+@interface QBaseAnimateScrollView : QBaseScrollView<QBaseNetOperationDelegate,UIScrollViewDelegate>
 {
     NSTimer *_timer;
     NSTimeInterval _timeInterval;
     
     NSInteger _page;
+
+    QBaseHTTPCompleteBlock _httpCompleteBlock;
 }
 
 /**
@@ -56,6 +58,17 @@
  *  刷新数据源
  */
 - (void)reloadData;
+
+/**
+ *   加载数据
+ *
+ *  @param operation         请求任务
+ *  @param params            请求参数
+ *  @param httpCompleteBlock 请求回调
+ */
+- (void)loadFromOperation:(QBaseNetOperation *)operation
+                   params:(NSDictionary *)params
+        operationComplete:(QBaseHTTPCompleteBlock)httpCompleteBlock;
 
 #pragma mark -
 #pragma marl 轮播动画

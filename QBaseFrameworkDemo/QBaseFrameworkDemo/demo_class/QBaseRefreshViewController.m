@@ -8,9 +8,12 @@
 
 #import "QBaseRefreshViewController.h"
 #import "QBaseNewsModel.h"
+#import "QBaseNewsOperation.h"
 
 @interface QBaseRefreshViewController ()
 {
+    QBaseAnimateScrollView *_scrollView;
+    
     NSMutableArray *_dataArray;
 }
 @end
@@ -30,28 +33,14 @@
 
     
     
-    QBaseAnimateScrollView *scrollView = [[QBaseAnimateScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 300)];
-    scrollView.usedXIB = YES;
-    scrollView.isLoop = YES;
-    scrollView.animateInterval = 2;
-    scrollView.qbase_delegate = self;
-    t.tableHeaderView = scrollView;
+    _scrollView = [[QBaseAnimateScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 300)];
+    _scrollView.usedXIB = YES;
+    _scrollView.isLoop = YES;
+    _scrollView.animateInterval = 3.0f;
+    _scrollView.qbase_delegate = self;
+    t.tableHeaderView = _scrollView;
     
-    
-    
-    NSMutableArray *arr = [NSMutableArray new];
-    for (int i = 0; i < 3; i++) {
-        
-        QBaseNewsModel *newsModel = [[QBaseNewsModel alloc] init];
-        
-        newsModel.title = [NSString stringWithFormat:@"%d", i];
-        newsModel.imgPath = @"http://pic.nipic.com/2007-12-28/20071228114234633_2.jpg";
-        
-        [arr addObject:newsModel];
-    }
-    
-    scrollView.dataArray = arr;
-    [scrollView reloadData];
+    [_scrollView loadFromOperation:[QBaseNewsOperation new] params:nil operationComplete:nil];
 }
 
 #pragma mark -
@@ -59,12 +48,12 @@
 
 - (void)scrollView:(QBaseAnimateScrollView *)scrollView didChangedCurrentIndex:(NSInteger)index
 {
-    NSLog(@"页码发生变化, 最新一页为%ld", index);
+    NSLog(@"页码发生变化, 最新一页为%d", index);
 }
 
 - (void)scrollView:(QBaseAnimateScrollView *)scrollView didSelectElementViewWithIndex:(NSInteger)index
 {
-    NSLog(@"元素被点击, 点击元素为第%ld页", index);
+    NSLog(@"元素被点击, 点击元素为第%d页", index);
 }
 
 #pragma mark -
@@ -74,6 +63,8 @@
 {
     NSLog(@"开始刷新");
     
+    [_scrollView stopAnimate];
+    
     [tableView performSelector:@selector(endRefreshing)
                     withObject:nil
                     afterDelay:1.0];
@@ -81,6 +72,8 @@
 
 - (void)tableViewDidFinishRefresh:(QBaseTableView *)tableView
 {
+    [_scrollView startAnimate];
+    
     NSLog(@"结束刷新");
 }
 

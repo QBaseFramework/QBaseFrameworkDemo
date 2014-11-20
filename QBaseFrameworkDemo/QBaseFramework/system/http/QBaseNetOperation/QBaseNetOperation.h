@@ -14,10 +14,11 @@
 // 是否全局获取本地文件
 #define IS_LOADING_LOCAL_JSON 0
 
+@class QBaseNetOperation;
+typedef void (^QBaseHTTPCompleteBlock) (QBaseNetOperation *operation);
 typedef void (^QBaseHTTPBodyBlock) (id<AFMultipartFormData>formData);
 
 @class QBaseRequest;
-@class QBaseNetOperation;
 @protocol QBaseNetOperationDelegate <NSObject>
 
 - (void)netOperationDidFinish:(QBaseNetOperation *)operation;

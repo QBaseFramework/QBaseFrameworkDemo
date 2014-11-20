@@ -10,6 +10,6 @@
 
 @interface QBaseNewsModel : QBaseModel
 
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *imgPath;
+@property (nonatomic, copy) NSString *imageName;
+@property (nonatomic, copy) NSString *path;
 @end
