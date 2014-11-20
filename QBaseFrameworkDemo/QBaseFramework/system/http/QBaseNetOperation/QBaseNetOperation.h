@@ -12,7 +12,7 @@
 #import "QBaseNetOperationURLHeader.h"
 
 // 是否全局获取本地文件
-#define IS_LOADING_LOCAL_JSON 0
+#define QBASE_LOADING_LOCAL_JSON_FLAG 0
 
 @class QBaseNetOperation;
 typedef void (^QBaseHTTPCompleteBlock) (QBaseNetOperation *operation);

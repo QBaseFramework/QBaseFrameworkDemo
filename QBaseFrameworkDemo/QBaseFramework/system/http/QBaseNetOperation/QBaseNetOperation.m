@@ -30,8 +30,8 @@
         self.isDatabaseCache = YES;
         
         // 如果定义了统一开关, 则默认全局设置
-#ifdef IS_LOADING_LOCAL_JSON
-        self.isLoadingLocalJson = IS_LOADING_LOCAL_JSON;
+#ifdef QBASE_LOADING_LOCAL_JSON_FLAG
+        self.isLoadingLocalJson = QBASE_LOADING_LOCAL_JSON_FLAG;
 #endif
         
         // 用户自定义匹配

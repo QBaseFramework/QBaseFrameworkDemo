@@ -115,4 +115,27 @@ CG_INLINE void QBASE_LOG (NSString *format, ...)
  */
 #define Q_USER_DEFAULT ([NSUserDefaults standardUserDefaults])
 
+/**
+ *  沙盒路径
+ */
+#define Q_PATH_SANDBOX ( NSHomeDirectory() )
+#define Q_PATH_DOCUMENTS ( NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] )
+#define Q_PATH_LIBRARY   ( NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0] )
+#define Q_PATH_TMP     ( NSTemporaryDirectory() )
+
+/**
+ *  自定义沙盒路径
+ */
+#define P_PATH_FORMAT(main_path,sub_path) ( sub_path==nil ? main_path : [NSString stringWithFormat:@"%@/%@", main_path, sub_path] )
+#define Q_PATH_FORMAT_SANDBOX(sub_path)   P_PATH_FORMAT(PATH_SANDBOX, sub_path)
+#define Q_PATH_FORMAT_DOCUMENTS(sub_path) P_PATH_FORMAT(PATH_LIBRARY, sub_path)
+#define Q_PATH_FORMAT_LIBRARY(sub_path)   P_PATH_FORMAT(PATH_LIBRARY, sub_path)
+#define Q_PATH_FORMAT_TMP(sub_path)       P_PATH_FORMAT(PATH_TMP, sub_path)
+
+/**
+ *  资源文件路径
+ */
+#define Q_PATH_RESOURCE(resource, type) \
+[[NSBundle mainBundle] pathForResource:resource ofType:type]
+
 #endif

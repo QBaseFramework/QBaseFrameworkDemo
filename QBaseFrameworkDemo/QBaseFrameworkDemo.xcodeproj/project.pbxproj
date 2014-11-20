@@ -33,12 +33,15 @@
 		A1665A9E1A08C01D001A7482 /* QBaseNewsOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A1665A9D1A08C01D001A7482 /* QBaseNewsOperation.m */; };
 		A1B72F031A1D96060018ED51 /* NSDate+RefreshControlHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F021A1D96060018ED51 /* NSDate+RefreshControlHelp.m */; };
 		A1B72F071A1D98A30018ED51 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F061A1D98A30018ED51 /* ODRefreshControl.m */; };
-		A1B72F0B1A1D99060018ED51 /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F0A1A1D99060018ED51 /* FBKVOController.m */; };
 		A1B72F191A1D99A60018ED51 /* QBaseFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F0E1A1D99A60018ED51 /* QBaseFileManager.m */; };
 		A1B72F1A1A1D99A60018ED51 /* UIImageView+LoadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F111A1D99A60018ED51 /* UIImageView+LoadImage.m */; };
 		A1B72F1B1A1D99A60018ED51 /* QBaseLocationGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F151A1D99A60018ED51 /* QBaseLocationGeocoder.m */; };
 		A1B72F1C1A1D99A60018ED51 /* QBaseUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F181A1D99A60018ED51 /* QBaseUserInfo.m */; };
 		A1B72F1F1A1D99B90018ED51 /* QBaseKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F1E1A1D99B90018ED51 /* QBaseKVOController.m */; };
+		A1B72F2B1A1D9AEA0018ED51 /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F221A1D9AEA0018ED51 /* FBKVOController.m */; };
+		A1B72F2C1A1D9AEA0018ED51 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F251A1D9AEA0018ED51 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A1B72F2D1A1D9AEA0018ED51 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A1B72F281A1D9AEA0018ED51 /* SVProgressHUD.bundle */; };
+		A1B72F2E1A1D9AEA0018ED51 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F2A1A1D9AEA0018ED51 /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A1E958E319EE6E9F006B68C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E958E219EE6E9F006B68C2 /* Foundation.framework */; };
 		A1E958E519EE6E9F006B68C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E958E419EE6E9F006B68C2 /* CoreGraphics.framework */; };
 		A1E958E719EE6E9F006B68C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E958E619EE6E9F006B68C2 /* UIKit.framework */; };
@@ -182,8 +185,6 @@
 		A1B72F021A1D96060018ED51 /* NSDate+RefreshControlHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RefreshControlHelp.m"; sourceTree = "<group>"; };
 		A1B72F051A1D98A30018ED51 /* ODRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
 		A1B72F061A1D98A30018ED51 /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
-		A1B72F091A1D99060018ED51 /* FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBKVOController.h; sourceTree = "<group>"; };
-		A1B72F0A1A1D99060018ED51 /* FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBKVOController.m; sourceTree = "<group>"; };
 		A1B72F0D1A1D99A60018ED51 /* QBaseFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseFileManager.h; sourceTree = "<group>"; };
 		A1B72F0E1A1D99A60018ED51 /* QBaseFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseFileManager.m; sourceTree = "<group>"; };
 		A1B72F101A1D99A60018ED51 /* UIImageView+LoadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LoadImage.h"; sourceTree = "<group>"; };
@@ -194,6 +195,14 @@
 		A1B72F181A1D99A60018ED51 /* QBaseUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseUserInfo.m; sourceTree = "<group>"; };
 		A1B72F1D1A1D99B90018ED51 /* QBaseKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseKVOController.h; sourceTree = "<group>"; };
 		A1B72F1E1A1D99B90018ED51 /* QBaseKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseKVOController.m; sourceTree = "<group>"; };
+		A1B72F211A1D9AEA0018ED51 /* FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBKVOController.h; sourceTree = "<group>"; };
+		A1B72F221A1D9AEA0018ED51 /* FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBKVOController.m; sourceTree = "<group>"; };
+		A1B72F241A1D9AEA0018ED51 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		A1B72F251A1D9AEA0018ED51 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		A1B72F261A1D9AEA0018ED51 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		A1B72F281A1D9AEA0018ED51 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		A1B72F291A1D9AEA0018ED51 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		A1B72F2A1A1D9AEA0018ED51 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		A1E958DF19EE6E9F006B68C2 /* QBaseFrameworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QBaseFrameworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E958E219EE6E9F006B68C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1E958E419EE6E9F006B68C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -501,15 +510,6 @@
 			path = ODRefreshControl;
 			sourceTree = "<group>";
 		};
-		A1B72F081A1D99060018ED51 /* FBKVOController */ = {
-			isa = PBXGroup;
-			children = (
-				A1B72F091A1D99060018ED51 /* FBKVOController.h */,
-				A1B72F0A1A1D99060018ED51 /* FBKVOController.m */,
-			);
-			path = FBKVOController;
-			sourceTree = "<group>";
-		};
 		A1B72F0C1A1D99A60018ED51 /* QBaseFileManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +553,35 @@
 				A1B72F181A1D99A60018ED51 /* QBaseUserInfo.m */,
 			);
 			path = QBaseUserInfo;
+			sourceTree = "<group>";
+		};
+		A1B72F201A1D9AEA0018ED51 /* FBKVOController */ = {
+			isa = PBXGroup;
+			children = (
+				A1B72F211A1D9AEA0018ED51 /* FBKVOController.h */,
+				A1B72F221A1D9AEA0018ED51 /* FBKVOController.m */,
+			);
+			path = FBKVOController;
+			sourceTree = "<group>";
+		};
+		A1B72F231A1D9AEA0018ED51 /* GTMBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				A1B72F241A1D9AEA0018ED51 /* GTMBase64.h */,
+				A1B72F251A1D9AEA0018ED51 /* GTMBase64.m */,
+				A1B72F261A1D9AEA0018ED51 /* GTMDefines.h */,
+			);
+			path = GTMBase64;
+			sourceTree = "<group>";
+		};
+		A1B72F271A1D9AEA0018ED51 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A1B72F281A1D9AEA0018ED51 /* SVProgressHUD.bundle */,
+				A1B72F291A1D9AEA0018ED51 /* SVProgressHUD.h */,
+				A1B72F2A1A1D9AEA0018ED51 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		A1E958D619EE6E9F006B68C2 = {
@@ -826,7 +855,9 @@
 		A1E9594019EE6EB3006B68C2 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
-				A1B72F081A1D99060018ED51 /* FBKVOController */,
+				A1B72F201A1D9AEA0018ED51 /* FBKVOController */,
+				A1B72F231A1D9AEA0018ED51 /* GTMBase64 */,
+				A1B72F271A1D9AEA0018ED51 /* SVProgressHUD */,
 				A1B72F041A1D98A30018ED51 /* ODRefreshControl */,
 				A1457A8F19F4E873001185D9 /* FCCurrentLocationGeocoder */,
 				A1E9594119EE6EB3006B68C2 /* AFNetworking */,
@@ -1137,6 +1168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A106EEDD1A04CDBA00B4C470 /* 1.png in Resources */,
+				A1B72F2D1A1D9AEA0018ED51 /* SVProgressHUD.bundle in Resources */,
 				A1665A9B1A087DB2001A7482 /* QBaseNewsElement.xib in Resources */,
 				A1E958ED19EE6E9F006B68C2 /* InfoPlist.strings in Resources */,
 				A1E958F519EE6E9F006B68C2 /* Images.xcassets in Resources */,
@@ -1186,6 +1218,7 @@
 				A1E959F719EE6EB3006B68C2 /* FMResultSet.m in Sources */,
 				A1665A9E1A08C01D001A7482 /* QBaseNewsOperation.m in Sources */,
 				A1E95A0519EE6EB3006B68C2 /* Reachability.m in Sources */,
+				A1B72F2C1A1D9AEA0018ED51 /* GTMBase64.m in Sources */,
 				A106EF091A0725D700B4C470 /* QBaseAnimateScrollView.m in Sources */,
 				A106EEE21A04EB0B00B4C470 /* UIView+DDAddition.m in Sources */,
 				A1B72F031A1D96060018ED51 /* NSDate+RefreshControlHelp.m in Sources */,
@@ -1244,9 +1277,11 @@
 				A1E959F419EE6EB3006B68C2 /* FMDatabaseAdditions.m in Sources */,
 				A1E95A0A19EE6EB3006B68C2 /* SDImageCache.m in Sources */,
 				A1B72F191A1D99A60018ED51 /* QBaseFileManager.m in Sources */,
+				A1B72F2E1A1D9AEA0018ED51 /* SVProgressHUD.m in Sources */,
 				A103429A19F27F880042EF1C /* QBaseTableView.m in Sources */,
 				A1E959E419EE6EB3006B68C2 /* AFURLResponseSerialization.m in Sources */,
 				A1665A961A087D8A001A7482 /* QBaseNewsElement.m in Sources */,
+				A1B72F2B1A1D9AEA0018ED51 /* FBKVOController.m in Sources */,
 				A1E95A1719EE6EB3006B68C2 /* UIView+WebCacheOperation.m in Sources */,
 				A1E959ED19EE6EB3006B68C2 /* FICUtilities.m in Sources */,
 				A106EEEF1A04F04C00B4C470 /* NSString+Additions.m in Sources */,
@@ -1254,7 +1289,6 @@
 				A106EF0C1A07275A00B4C470 /* QBaseAnimateScrollViewElement.m in Sources */,
 				A1E959D919EE6EB3006B68C2 /* QBaseRequest.m in Sources */,
 				A1E959F519EE6EB3006B68C2 /* FMDatabasePool.m in Sources */,
-				A1B72F0B1A1D99060018ED51 /* FBKVOController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
