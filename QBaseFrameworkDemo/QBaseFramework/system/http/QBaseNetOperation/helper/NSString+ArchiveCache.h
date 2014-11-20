@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#define QBASE_ARCHIVE_CACHE_PATH @"/Users/andy/Desktop/archive"
+#define QBASE_ARCHIVE_CACHE_PATH [NSString stringWithFormat:@"%@/Library/Caches/ArchiveCache", NSHomeDirectory()]
 
 @interface NSString (ArchiveCache)
 
