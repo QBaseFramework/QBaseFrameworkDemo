@@ -7,13 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A103428D19F27D9F0042EF1C /* QBaseFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A103428319F27D9F0042EF1C /* QBaseFileManager.m */; };
-		A103428E19F27D9F0042EF1C /* UIImageView+LoadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A103428619F27D9F0042EF1C /* UIImageView+LoadImage.m */; };
-		A103429019F27D9F0042EF1C /* QBaseUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A103428C19F27D9F0042EF1C /* QBaseUserInfo.m */; };
 		A103429419F27E4F0042EF1C /* QBaseViewController+Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = A103429319F27E4F0042EF1C /* QBaseViewController+Photo.m */; };
 		A103429A19F27F880042EF1C /* QBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A103429719F27F880042EF1C /* QBaseTableView.m */; };
 		A103429B19F27F880042EF1C /* QBaseWaterDropRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A103429919F27F880042EF1C /* QBaseWaterDropRefreshTableView.m */; };
-		A103429F19F27FB50042EF1C /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A103429E19F27FB50042EF1C /* ODRefreshControl.m */; };
 		A106EEDD1A04CDBA00B4C470 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = A106EEDC1A04CDBA00B4C470 /* 1.png */; };
 		A106EEE21A04EB0B00B4C470 /* UIView+DDAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = A106EEE11A04EB0B00B4C470 /* UIView+DDAddition.m */; };
 		A106EEE71A04EBA000B4C470 /* NSDate+DDAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = A106EEE61A04EBA000B4C470 /* NSDate+DDAddition.m */; };
@@ -29,7 +25,6 @@
 		A106EF0C1A07275A00B4C470 /* QBaseAnimateScrollViewElement.m in Sources */ = {isa = PBXBuildFile; fileRef = A106EF0B1A07275A00B4C470 /* QBaseAnimateScrollViewElement.m */; };
 		A106EF0F1A0729A200B4C470 /* QBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A106EF0E1A0729A200B4C470 /* QBaseView.m */; };
 		A1457A8319F4E78A001185D9 /* QBaseViewController+LocationGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A8219F4E78A001185D9 /* QBaseViewController+LocationGeocoder.m */; };
-		A1457A8E19F4E83B001185D9 /* QBaseLocationGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A8B19F4E83B001185D9 /* QBaseLocationGeocoder.m */; };
 		A1457A9419F4E873001185D9 /* FCCurrentLocationGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A9119F4E873001185D9 /* FCCurrentLocationGeocoder.m */; };
 		A1457A9519F4E873001185D9 /* FCIPAddressGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A9319F4E873001185D9 /* FCIPAddressGeocoder.m */; };
 		A1665A961A087D8A001A7482 /* QBaseNewsElement.m in Sources */ = {isa = PBXBuildFile; fileRef = A1665A951A087D8A001A7482 /* QBaseNewsElement.m */; };
@@ -37,6 +32,13 @@
 		A1665A9B1A087DB2001A7482 /* QBaseNewsElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1665A9A1A087DB2001A7482 /* QBaseNewsElement.xib */; };
 		A1665A9E1A08C01D001A7482 /* QBaseNewsOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A1665A9D1A08C01D001A7482 /* QBaseNewsOperation.m */; };
 		A1B72F031A1D96060018ED51 /* NSDate+RefreshControlHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F021A1D96060018ED51 /* NSDate+RefreshControlHelp.m */; };
+		A1B72F071A1D98A30018ED51 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F061A1D98A30018ED51 /* ODRefreshControl.m */; };
+		A1B72F0B1A1D99060018ED51 /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F0A1A1D99060018ED51 /* FBKVOController.m */; };
+		A1B72F191A1D99A60018ED51 /* QBaseFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F0E1A1D99A60018ED51 /* QBaseFileManager.m */; };
+		A1B72F1A1A1D99A60018ED51 /* UIImageView+LoadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F111A1D99A60018ED51 /* UIImageView+LoadImage.m */; };
+		A1B72F1B1A1D99A60018ED51 /* QBaseLocationGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F151A1D99A60018ED51 /* QBaseLocationGeocoder.m */; };
+		A1B72F1C1A1D99A60018ED51 /* QBaseUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F181A1D99A60018ED51 /* QBaseUserInfo.m */; };
+		A1B72F1F1A1D99B90018ED51 /* QBaseKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B72F1E1A1D99B90018ED51 /* QBaseKVOController.m */; };
 		A1E958E319EE6E9F006B68C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E958E219EE6E9F006B68C2 /* Foundation.framework */; };
 		A1E958E519EE6E9F006B68C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E958E419EE6E9F006B68C2 /* CoreGraphics.framework */; };
 		A1E958E719EE6E9F006B68C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E958E619EE6E9F006B68C2 /* UIKit.framework */; };
@@ -129,12 +131,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A103428219F27D9F0042EF1C /* QBaseFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseFileManager.h; sourceTree = "<group>"; };
-		A103428319F27D9F0042EF1C /* QBaseFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseFileManager.m; sourceTree = "<group>"; };
-		A103428519F27D9F0042EF1C /* UIImageView+LoadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LoadImage.h"; sourceTree = "<group>"; };
-		A103428619F27D9F0042EF1C /* UIImageView+LoadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LoadImage.m"; sourceTree = "<group>"; };
-		A103428B19F27D9F0042EF1C /* QBaseUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseUserInfo.h; sourceTree = "<group>"; };
-		A103428C19F27D9F0042EF1C /* QBaseUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseUserInfo.m; sourceTree = "<group>"; };
 		A103429119F27DBB0042EF1C /* QBaseUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseUtils.h; sourceTree = "<group>"; };
 		A103429219F27E4F0042EF1C /* QBaseViewController+Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QBaseViewController+Photo.h"; sourceTree = "<group>"; };
 		A103429319F27E4F0042EF1C /* QBaseViewController+Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QBaseViewController+Photo.m"; sourceTree = "<group>"; };
@@ -142,8 +138,6 @@
 		A103429719F27F880042EF1C /* QBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseTableView.m; sourceTree = "<group>"; };
 		A103429819F27F880042EF1C /* QBaseWaterDropRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseWaterDropRefreshTableView.h; sourceTree = "<group>"; };
 		A103429919F27F880042EF1C /* QBaseWaterDropRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseWaterDropRefreshTableView.m; sourceTree = "<group>"; };
-		A103429D19F27FB50042EF1C /* ODRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
-		A103429E19F27FB50042EF1C /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
 		A106EEDC1A04CDBA00B4C470 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		A106EEE01A04EB0B00B4C470 /* UIView+DDAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDAddition.h"; sourceTree = "<group>"; };
 		A106EEE11A04EB0B00B4C470 /* UIView+DDAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDAddition.m"; sourceTree = "<group>"; };
@@ -173,8 +167,6 @@
 		A106EF0E1A0729A200B4C470 /* QBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseView.m; sourceTree = "<group>"; };
 		A1457A8119F4E78A001185D9 /* QBaseViewController+LocationGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QBaseViewController+LocationGeocoder.h"; sourceTree = "<group>"; };
 		A1457A8219F4E78A001185D9 /* QBaseViewController+LocationGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QBaseViewController+LocationGeocoder.m"; sourceTree = "<group>"; };
-		A1457A8A19F4E83B001185D9 /* QBaseLocationGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseLocationGeocoder.h; sourceTree = "<group>"; };
-		A1457A8B19F4E83B001185D9 /* QBaseLocationGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseLocationGeocoder.m; sourceTree = "<group>"; };
 		A1457A9019F4E873001185D9 /* FCCurrentLocationGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCCurrentLocationGeocoder.h; sourceTree = "<group>"; };
 		A1457A9119F4E873001185D9 /* FCCurrentLocationGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCCurrentLocationGeocoder.m; sourceTree = "<group>"; };
 		A1457A9219F4E873001185D9 /* FCIPAddressGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCIPAddressGeocoder.h; sourceTree = "<group>"; };
@@ -188,6 +180,20 @@
 		A1665A9D1A08C01D001A7482 /* QBaseNewsOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseNewsOperation.m; sourceTree = "<group>"; };
 		A1B72F011A1D96060018ED51 /* NSDate+RefreshControlHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RefreshControlHelp.h"; sourceTree = "<group>"; };
 		A1B72F021A1D96060018ED51 /* NSDate+RefreshControlHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RefreshControlHelp.m"; sourceTree = "<group>"; };
+		A1B72F051A1D98A30018ED51 /* ODRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
+		A1B72F061A1D98A30018ED51 /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
+		A1B72F091A1D99060018ED51 /* FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBKVOController.h; sourceTree = "<group>"; };
+		A1B72F0A1A1D99060018ED51 /* FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBKVOController.m; sourceTree = "<group>"; };
+		A1B72F0D1A1D99A60018ED51 /* QBaseFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseFileManager.h; sourceTree = "<group>"; };
+		A1B72F0E1A1D99A60018ED51 /* QBaseFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseFileManager.m; sourceTree = "<group>"; };
+		A1B72F101A1D99A60018ED51 /* UIImageView+LoadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LoadImage.h"; sourceTree = "<group>"; };
+		A1B72F111A1D99A60018ED51 /* UIImageView+LoadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LoadImage.m"; sourceTree = "<group>"; };
+		A1B72F141A1D99A60018ED51 /* QBaseLocationGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseLocationGeocoder.h; sourceTree = "<group>"; };
+		A1B72F151A1D99A60018ED51 /* QBaseLocationGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseLocationGeocoder.m; sourceTree = "<group>"; };
+		A1B72F171A1D99A60018ED51 /* QBaseUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseUserInfo.h; sourceTree = "<group>"; };
+		A1B72F181A1D99A60018ED51 /* QBaseUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseUserInfo.m; sourceTree = "<group>"; };
+		A1B72F1D1A1D99B90018ED51 /* QBaseKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseKVOController.h; sourceTree = "<group>"; };
+		A1B72F1E1A1D99B90018ED51 /* QBaseKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseKVOController.m; sourceTree = "<group>"; };
 		A1E958DF19EE6E9F006B68C2 /* QBaseFrameworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QBaseFrameworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E958E219EE6E9F006B68C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1E958E419EE6E9F006B68C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -380,33 +386,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A103428119F27D9F0042EF1C /* fileManager */ = {
-			isa = PBXGroup;
-			children = (
-				A103428219F27D9F0042EF1C /* QBaseFileManager.h */,
-				A103428319F27D9F0042EF1C /* QBaseFileManager.m */,
-			);
-			path = fileManager;
-			sourceTree = "<group>";
-		};
-		A103428419F27D9F0042EF1C /* ImageCache */ = {
-			isa = PBXGroup;
-			children = (
-				A103428519F27D9F0042EF1C /* UIImageView+LoadImage.h */,
-				A103428619F27D9F0042EF1C /* UIImageView+LoadImage.m */,
-			);
-			path = ImageCache;
-			sourceTree = "<group>";
-		};
-		A103428A19F27D9F0042EF1C /* userInfo */ = {
-			isa = PBXGroup;
-			children = (
-				A103428B19F27D9F0042EF1C /* QBaseUserInfo.h */,
-				A103428C19F27D9F0042EF1C /* QBaseUserInfo.m */,
-			);
-			path = userInfo;
-			sourceTree = "<group>";
-		};
 		A103429519F27F880042EF1C /* refreshTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,16 +396,6 @@
 			);
 			path = refreshTableView;
 			sourceTree = "<group>";
-		};
-		A103429C19F27FB50042EF1C /* ODRefreshControl */ = {
-			isa = PBXGroup;
-			children = (
-				A103429D19F27FB50042EF1C /* ODRefreshControl.h */,
-				A103429E19F27FB50042EF1C /* ODRefreshControl.m */,
-			);
-			name = ODRefreshControl;
-			path = QBaseFramework/vendor/ODRefreshControl;
-			sourceTree = SOURCE_ROOT;
 		};
 		A106EEDE1A04E98100B4C470 /* category */ = {
 			isa = PBXGroup;
@@ -512,15 +481,6 @@
 			path = headerScrollerView;
 			sourceTree = "<group>";
 		};
-		A1457A8419F4E83B001185D9 /* locationGeocoder */ = {
-			isa = PBXGroup;
-			children = (
-				A1457A8A19F4E83B001185D9 /* QBaseLocationGeocoder.h */,
-				A1457A8B19F4E83B001185D9 /* QBaseLocationGeocoder.m */,
-			);
-			path = locationGeocoder;
-			sourceTree = "<group>";
-		};
 		A1457A8F19F4E873001185D9 /* FCCurrentLocationGeocoder */ = {
 			isa = PBXGroup;
 			children = (
@@ -530,6 +490,69 @@
 				A1457A9319F4E873001185D9 /* FCIPAddressGeocoder.m */,
 			);
 			path = FCCurrentLocationGeocoder;
+			sourceTree = "<group>";
+		};
+		A1B72F041A1D98A30018ED51 /* ODRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				A1B72F051A1D98A30018ED51 /* ODRefreshControl.h */,
+				A1B72F061A1D98A30018ED51 /* ODRefreshControl.m */,
+			);
+			path = ODRefreshControl;
+			sourceTree = "<group>";
+		};
+		A1B72F081A1D99060018ED51 /* FBKVOController */ = {
+			isa = PBXGroup;
+			children = (
+				A1B72F091A1D99060018ED51 /* FBKVOController.h */,
+				A1B72F0A1A1D99060018ED51 /* FBKVOController.m */,
+			);
+			path = FBKVOController;
+			sourceTree = "<group>";
+		};
+		A1B72F0C1A1D99A60018ED51 /* QBaseFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				A1B72F0D1A1D99A60018ED51 /* QBaseFileManager.h */,
+				A1B72F0E1A1D99A60018ED51 /* QBaseFileManager.m */,
+			);
+			path = QBaseFileManager;
+			sourceTree = "<group>";
+		};
+		A1B72F0F1A1D99A60018ED51 /* QBaseImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				A1B72F101A1D99A60018ED51 /* UIImageView+LoadImage.h */,
+				A1B72F111A1D99A60018ED51 /* UIImageView+LoadImage.m */,
+			);
+			path = QBaseImageCache;
+			sourceTree = "<group>";
+		};
+		A1B72F121A1D99A60018ED51 /* QBaseKVOControl */ = {
+			isa = PBXGroup;
+			children = (
+				A1B72F1D1A1D99B90018ED51 /* QBaseKVOController.h */,
+				A1B72F1E1A1D99B90018ED51 /* QBaseKVOController.m */,
+			);
+			path = QBaseKVOControl;
+			sourceTree = "<group>";
+		};
+		A1B72F131A1D99A60018ED51 /* QBaseLocationGeocoder */ = {
+			isa = PBXGroup;
+			children = (
+				A1B72F141A1D99A60018ED51 /* QBaseLocationGeocoder.h */,
+				A1B72F151A1D99A60018ED51 /* QBaseLocationGeocoder.m */,
+			);
+			path = QBaseLocationGeocoder;
+			sourceTree = "<group>";
+		};
+		A1B72F161A1D99A60018ED51 /* QBaseUserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				A1B72F171A1D99A60018ED51 /* QBaseUserInfo.h */,
+				A1B72F181A1D99A60018ED51 /* QBaseUserInfo.m */,
+			);
+			path = QBaseUserInfo;
 			sourceTree = "<group>";
 		};
 		A1E958D619EE6E9F006B68C2 = {
@@ -699,7 +722,6 @@
 			children = (
 				A1E9593E19EE6EB3006B68C2 /* QBaseSystem.h */,
 				A106EEDE1A04E98100B4C470 /* category */,
-				A103429C19F27FB50042EF1C /* ODRefreshControl */,
 				A1E9592419EE6EB3006B68C2 /* cache */,
 				A1E9592619EE6EB3006B68C2 /* database */,
 				A1E9592B19EE6EB3006B68C2 /* http */,
@@ -792,10 +814,11 @@
 			isa = PBXGroup;
 			children = (
 				A103429119F27DBB0042EF1C /* QBaseUtils.h */,
-				A1457A8419F4E83B001185D9 /* locationGeocoder */,
-				A103428119F27D9F0042EF1C /* fileManager */,
-				A103428419F27D9F0042EF1C /* ImageCache */,
-				A103428A19F27D9F0042EF1C /* userInfo */,
+				A1B72F0C1A1D99A60018ED51 /* QBaseFileManager */,
+				A1B72F0F1A1D99A60018ED51 /* QBaseImageCache */,
+				A1B72F121A1D99A60018ED51 /* QBaseKVOControl */,
+				A1B72F131A1D99A60018ED51 /* QBaseLocationGeocoder */,
+				A1B72F161A1D99A60018ED51 /* QBaseUserInfo */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -803,6 +826,8 @@
 		A1E9594019EE6EB3006B68C2 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				A1B72F081A1D99060018ED51 /* FBKVOController */,
+				A1B72F041A1D98A30018ED51 /* ODRefreshControl */,
 				A1457A8F19F4E873001185D9 /* FCCurrentLocationGeocoder */,
 				A1E9594119EE6EB3006B68C2 /* AFNetworking */,
 				A1E9595819EE6EB3006B68C2 /* EGOCache */,
@@ -1138,16 +1163,18 @@
 				A1E95A0F19EE6EB3006B68C2 /* SDWebImageManager.m in Sources */,
 				A1E959EA19EE6EB3006B68C2 /* FICImageTable.m in Sources */,
 				A1E95A1019EE6EB3006B68C2 /* SDWebImagePrefetcher.m in Sources */,
+				A1B72F1C1A1D99A60018ED51 /* QBaseUserInfo.m in Sources */,
 				A106EF061A0725BA00B4C470 /* QBaseScrollView.m in Sources */,
 				A1E959EF19EE6EB3006B68C2 /* FLAnimatedImage.m in Sources */,
 				A106EEFD1A071D2E00B4C470 /* QBaseDemoTableView.m in Sources */,
 				A1E95A1419EE6EB3006B68C2 /* UIImage+WebP.m in Sources */,
 				A1E959EC19EE6EB3006B68C2 /* FICImageTableEntry.m in Sources */,
 				A1E95A0819EE6EB3006B68C2 /* MKAnnotationView+WebCache.m in Sources */,
+				A1B72F071A1D98A30018ED51 /* ODRefreshControl.m in Sources */,
 				A1E95A1B19EE6EB3006B68C2 /* TMDiskCache.m in Sources */,
-				A1457A8E19F4E83B001185D9 /* QBaseLocationGeocoder.m in Sources */,
 				A1E95A0319EE6EB3006B68C2 /* JSONValueTransformer.m in Sources */,
 				A1E95A0219EE6EB3006B68C2 /* JSONKeyMapper.m in Sources */,
+				A1B72F1F1A1D99B90018ED51 /* QBaseKVOController.m in Sources */,
 				A1E958F319EE6E9F006B68C2 /* QBaseAppDelegate.m in Sources */,
 				A1E959F819EE6EB3006B68C2 /* JSONKit.m in Sources */,
 				A1E95A1C19EE6EB3006B68C2 /* TMMemoryCache.m in Sources */,
@@ -1187,19 +1214,18 @@
 				A1E95A0019EE6EB3006B68C2 /* JSONHTTPClient.m in Sources */,
 				A1E959E319EE6EB3006B68C2 /* AFURLRequestSerialization.m in Sources */,
 				A1E95A0119EE6EB3006B68C2 /* JSONModel+networking.m in Sources */,
+				A1B72F1B1A1D99A60018ED51 /* QBaseLocationGeocoder.m in Sources */,
 				A1E959D419EE6EB3006B68C2 /* NSDictionary+OperationURL.m in Sources */,
 				A106EEE71A04EBA000B4C470 /* NSDate+DDAddition.m in Sources */,
 				A1E959F319EE6EB3006B68C2 /* FMDatabase.m in Sources */,
 				A1E959FE19EE6EB3006B68C2 /* NSArray+JSONModel.m in Sources */,
 				A1E959DF19EE6EB3006B68C2 /* AFHTTPSessionManager.m in Sources */,
-				A103428E19F27D9F0042EF1C /* UIImageView+LoadImage.m in Sources */,
 				A1E959DD19EE6EB3006B68C2 /* AFHTTPRequestOperation.m in Sources */,
 				A1E959D619EE6EB3006B68C2 /* QBaseNetOperation.m in Sources */,
 				A1E959E119EE6EB3006B68C2 /* AFSecurityPolicy.m in Sources */,
 				A1E959FD19EE6EB3006B68C2 /* JSONModelError.m in Sources */,
 				A1E959D119EE6EB3006B68C2 /* QBaseModel.m in Sources */,
 				A1E959E919EE6EB3006B68C2 /* FICImageFormat.m in Sources */,
-				A103429F19F27FB50042EF1C /* ODRefreshControl.m in Sources */,
 				A1457A9419F4E873001185D9 /* FCCurrentLocationGeocoder.m in Sources */,
 				A106EF001A071E9C00B4C470 /* QBaseListViewController.m in Sources */,
 				A1E959E019EE6EB3006B68C2 /* AFNetworkReachabilityManager.m in Sources */,
@@ -1208,16 +1234,16 @@
 				A1E959E519EE6EB3006B68C2 /* AFURLSessionManager.m in Sources */,
 				A103429419F27E4F0042EF1C /* QBaseViewController+Photo.m in Sources */,
 				A1E959D019EE6EB3006B68C2 /* QBaseViewController.m in Sources */,
+				A1B72F1A1A1D99A60018ED51 /* UIImageView+LoadImage.m in Sources */,
 				A1E95A0C19EE6EB3006B68C2 /* SDWebImageDecoder.m in Sources */,
-				A103428D19F27D9F0042EF1C /* QBaseFileManager.m in Sources */,
 				A103429B19F27F880042EF1C /* QBaseWaterDropRefreshTableView.m in Sources */,
 				A1E959D719EE6EB3006B68C2 /* NSObject+QBaseNetworkObserver.m in Sources */,
-				A103429019F27D9F0042EF1C /* QBaseUserInfo.m in Sources */,
 				A1E959D319EE6EB3006B68C2 /* QBaseSqlHanldler.m in Sources */,
 				A1E95A1319EE6EB3006B68C2 /* UIImage+MultiFormat.m in Sources */,
 				A1E959D819EE6EB3006B68C2 /* QBaseNetworkObserver.m in Sources */,
 				A1E959F419EE6EB3006B68C2 /* FMDatabaseAdditions.m in Sources */,
 				A1E95A0A19EE6EB3006B68C2 /* SDImageCache.m in Sources */,
+				A1B72F191A1D99A60018ED51 /* QBaseFileManager.m in Sources */,
 				A103429A19F27F880042EF1C /* QBaseTableView.m in Sources */,
 				A1E959E419EE6EB3006B68C2 /* AFURLResponseSerialization.m in Sources */,
 				A1665A961A087D8A001A7482 /* QBaseNewsElement.m in Sources */,
@@ -1228,6 +1254,7 @@
 				A106EF0C1A07275A00B4C470 /* QBaseAnimateScrollViewElement.m in Sources */,
 				A1E959D919EE6EB3006B68C2 /* QBaseRequest.m in Sources */,
 				A1E959F519EE6EB3006B68C2 /* FMDatabasePool.m in Sources */,
+				A1B72F0B1A1D99060018ED51 /* FBKVOController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,4 +14,5 @@
 #import "QBaseViewController+Photo.h"
 #import "QBaseUserInfo.h"
 #import "QBaseLocationGeocoder.h"
+#import "QBaseKVOController.h"
 #endif
