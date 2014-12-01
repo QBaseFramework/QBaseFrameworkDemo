@@ -61,8 +61,12 @@
 			continue;
 		}else if ([class_type isEqualToString:@"TB"]) {											        // bool类型字段
 			[keys addObject:[NSString stringWithFormat:@"%@ INTEGER ",name]];
-			continue;
-		}
+        }else if ([class_type isEqualToString:@"Ts"]) {											        // short类型字段
+            [keys addObject:[NSString stringWithFormat:@"%@ INTEGER ",name]];
+        }else {
+            QBASE_LOG(@"创建数据表 类型< %@ >无法识别", class_type);
+            continue;
+        }
     }
     if (haveKey) {
         [sql appendString:[keys componentsJoinedByString:@","]];
@@ -302,8 +306,11 @@
                     else if ([class_type isEqualToString:@"TB"]) {
                         // bool类型字段
                         [returnValue setObject:[NSString stringWithFormat:@"%ld",(long)str] forKey:name];
-                        continue;
+                    }else if ([class_type isEqualToString:@"Ts"]) {
+                        // short类型字段
+                        [returnValue setObject:[NSString stringWithFormat:@"%d",(short)str] forKey:name];
                     }else {
+                        continue;
                         QBASE_LOG(@"不支持的字段类型!%@",class_type);
                     }
                 }

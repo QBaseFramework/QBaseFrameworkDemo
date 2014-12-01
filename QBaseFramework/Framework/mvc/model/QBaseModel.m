@@ -46,7 +46,8 @@
  */
 - (BOOL)createTable
 {
-    return [self executeUpdate:[QBaseSqlHanldler createTableSql:[self class]], nil];
+    NSString *sql = [QBaseSqlHanldler createTableSql:[self class]];;
+    return [self executeUpdate:sql];
 }
 
 /**
@@ -220,101 +221,8 @@ va_list args_update;
 
 #pragma mark - SQL Helper
 
-+ (NSDictionary *)objectToDictionary:(NSObject *)myObject
-{
-    unsigned int outCount, i;
-    objc_property_t *properties = class_copyPropertyList([myObject class], &outCount);        //反射出类的所有属性
-    NSMutableDictionary *returnValue=[[NSMutableDictionary alloc] init];
-    
-    for (i = 0; i < outCount; i++) {
-        objc_property_t property = properties[i];
-        const char* propertyName = property_getName(property);
-        NSString *proty=[NSString stringWithFormat:@"%s",property_getAttributes(property)];      //字段的属性
-        NSString *name=[NSString stringWithFormat:@"%s",property_getName(property)];     //字段的名称
-        SEL selector = NSSelectorFromString([NSString stringWithUTF8String:propertyName]);     //判断是否有字段对应的get方法
-        
-        if ([myObject  respondsToSelector:selector])
-        {
-            NSString *class_type=[proty substringToIndex:2];
-            if ([class_type isEqualToString:@"Td"])
-            {
-                IMP myImp1 = [myObject methodForSelector:selector];
-                double str = ((double (*) (id,SEL))myImp1)(myObject,selector);
-                //                double str = objc_msgSend_fpret (myObject,selector);
-                [returnValue setObject:[NSString stringWithFormat:@"%f",str] forKey:name];
-            }
-            else if ([class_type isEqualToString:@"Tf"])
-            {
-                IMP myImp1 = [myObject methodForSelector:selector];
-                float str = ((float (*) (id,SEL))myImp1)(myObject,selector);
-                //                float str = objc_msgSend_fpret (myObject,selector);
-                [returnValue setObject:[NSString stringWithFormat:@"%f",str] forKey:name];
-            }
-            else if ([class_type isEqualToString:@"Tc"])
-            {
-                IMP myImp1 = [myObject methodForSelector:selector];
-                BOOL str = ((BOOL (*) (id,SEL))myImp1)(myObject,selector);
-                
-                [returnValue setObject:[NSString stringWithFormat:@"%d",str] forKey:name];
-            }
-            else if ([class_type isEqualToString:@"Ti"])
-            {
-                IMP myImp1 = [myObject methodForSelector:selector];
-                int str = ((int (*) (id,SEL))myImp1)(myObject,selector);
-                
-                [returnValue setObject:[NSString stringWithFormat:@"%d",str] forKey:name];
-            }
-            else
-            {
-        
-                id str = ((id(*)(id,SEL))objc_msgSend)(myObject, selector);//调用get方法
-                if (str!=nil)
-                {
-                    
-                    if ([class_type isEqualToString:@"Tl"]) {
-                        // long类型字段
-                        [returnValue setObject:[NSString stringWithFormat:@"%ld",(long)str] forKey:name];
-                    }else if ([class_type isEqualToString:@"T@"]) {
-                        if ([proty length]>12 && [[proty substringToIndex:12] isEqualToString:@"T@\"NSString\""])
-                        {
-                            // NSString 类型字段
-                            [returnValue setObject:[NSString stringWithFormat:@"%@",str] forKey:name];
-                        }
-                    }
-                    else if ([class_type isEqualToString:@"Tq"]) {
-                        // long long 类型字段
-                        [returnValue setObject:[NSString stringWithFormat:@"%lld",(long long)str]forKey:name];
-                    }
-                    else if ([class_type isEqualToString:@"TB"]) {
-                        // bool类型字段
-                        [returnValue setObject:[NSString stringWithFormat:@"%ld",(NSInteger)str] forKey:name];
-                        continue;
-                    }else {
-                        QBASE_LOG(@"不支持的字段类型!%@",class_type);
-                    }
-                }
-            }
-        }
-    }
-    
-    SEL selector = NSSelectorFromString([NSString stringWithFormat:@"%@",@"qbase_id"]);        //判断是否有字段对应的get方法
-    if ([myObject respondsToSelector:selector])
-    {
-        //        id str = [myObject performSelector:selector];          //调用get方法
-        //        if (str != nil)
-        //        {
-        IMP myImp1 = [myObject methodForSelector:selector];
-        long str = ((long (*) (id,SEL))myImp1)(myObject,selector);
-        [returnValue setObject:[NSString stringWithFormat:@"%ld",str] forKey:@"qbase_id"];
-        //        }
-    }
-    free(properties);
-    return returnValue;
-}
-
 - (NSArray *)transformResult:(FMResultSet *)result
 {
-    
     NSMutableArray *array = [NSMutableArray array];
     
     while ([result next]) {

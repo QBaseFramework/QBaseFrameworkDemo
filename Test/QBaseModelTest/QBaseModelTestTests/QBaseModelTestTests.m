@@ -90,7 +90,12 @@
                                        pageNumber:1
                                          pageSize:1
                                             order:nil];
-    QBASE_LOG(@"%d", selectArr.count);
+    QBASE_LOG(@"%ld", selectArr.count);
 }
 
+- (void)testDrop
+{
+    BOOL hasDrop = [_stu dropTable];
+    QBASE_LOG(@"是否移除表: %d", hasDrop);
+}
 @end
