@@ -32,11 +32,11 @@
 /**
  *  打印日志
  */
-//#ifdef DEBUG
-#define QBase_LOG(...) NSLog(__VA_ARGS__)
-//#else
-//#define QBase_LOG(...)
-//#endif
+#ifdef DEBUG
+#define QBASE_LOG(...) NSLog(__VA_ARGS__)
+#else
+#define QBase_LOG(...)
+#endif
 
 /**
  *  色值宏定义

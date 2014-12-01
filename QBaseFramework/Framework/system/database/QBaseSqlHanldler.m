@@ -304,7 +304,7 @@
                         [returnValue setObject:[NSString stringWithFormat:@"%ld",(long)str] forKey:name];
                         continue;
                     }else {
-//                        QBASE_LOG(@"不支持的字段类型!%@",class_type);
+                        QBASE_LOG(@"不支持的字段类型!%@",class_type);
                     }
                 }
             }

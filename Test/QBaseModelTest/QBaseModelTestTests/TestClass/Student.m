@@ -12,7 +12,7 @@
 
 - (NSString *)uniqueIndex
 {
-    return [NSString stringWithFormat:@"%d", self.uid];
+    return @"uid";
 }
 
 @end

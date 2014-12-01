@@ -20,7 +20,7 @@
 
 - (void)setUp {
     [super setUp];
-
+    
     NSDictionary *params = @{
                                 @"uid"           : @(1),
                                 @"q_char"        : @"c",
@@ -49,5 +49,48 @@
     NSLog(@"%@", _stu);
 }
 
+- (void)testInsert
+{
+    BOOL hasInsert = [_stu insertTable];
+    QBASE_LOG(@"插入结果: %d", hasInsert);
+}
+
+- (void)testDelete
+{
+    BOOL hasDelete = [[[_stu selectFromTable] lastObject] deleteFromTable];
+    QBASE_LOG(@"删除结果: %d", hasDelete);
+}
+
+- (void)testUpdate
+{
+    _stu = [[_stu selectFromTable] lastObject];
+    
+    _stu.q_char = 10;
+    _stu.q_short = 10;
+    _stu.q_int = 10;
+    _stu.q_long = 10;
+    _stu.q_long_long = 10;
+    _stu.q_float = 10.10;
+    _stu.q_float = 10.10;
+    
+    _stu.q_number = @(10);
+    _stu.q_string = @"Update";
+    _stu.q_array = @[@"Update"];
+    _stu.q_m_array = [@[@"Update"] mutableCopy];
+    _stu.q_dictionary = @{@"Update":@"Update"};
+    _stu.q_m_dictionary = [@{@"Update":@"Update"} mutableCopy];
+
+    [_stu updateTable];
+}
+
+- (void)testSelect
+{
+    NSArray *selectArr = [_stu selectByConditions:@"uid=1"
+                                             args:nil
+                                       pageNumber:1
+                                         pageSize:1
+                                            order:nil];
+    QBASE_LOG(@"%d", selectArr.count);
+}
 
 @end

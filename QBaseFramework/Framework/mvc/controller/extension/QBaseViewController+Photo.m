@@ -31,7 +31,7 @@ if ([UIImagePickerController isSourceTypeAvailable:__sourceType]) {\
     if (keyWindow) {
         [_sheet showInView:keyWindow];
     }else {
-//        QBASE_LOG(@"%@ 异常", [self class]);
+        QBASE_LOG(@"%@ 异常", [self class]);
     };
 }
 
