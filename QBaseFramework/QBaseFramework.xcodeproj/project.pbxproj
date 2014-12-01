@@ -208,6 +208,7 @@
 		A11EEA2D1A29642F00FA478C /* TMDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EE9671A29642F00FA478C /* TMDiskCache.m */; };
 		A11EEA2E1A29642F00FA478C /* TMMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A11EE9681A29642F00FA478C /* TMMemoryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A11EEA2F1A29642F00FA478C /* TMMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EE9691A29642F00FA478C /* TMMemoryCache.m */; };
+		A145070D1A2C5B3D00BB9650 /* QBaseModelDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A145070C1A2C5B3D00BB9650 /* QBaseModelDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -414,6 +415,7 @@
 		A11EE9671A29642F00FA478C /* TMDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDiskCache.m; sourceTree = "<group>"; };
 		A11EE9681A29642F00FA478C /* TMMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMMemoryCache.h; sourceTree = "<group>"; };
 		A11EE9691A29642F00FA478C /* TMMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMMemoryCache.m; sourceTree = "<group>"; };
+		A145070C1A2C5B3D00BB9650 /* QBaseModelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseModelDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -534,6 +536,7 @@
 			children = (
 				A11EE8811A29642F00FA478C /* QBaseModel.h */,
 				A11EE8821A29642F00FA478C /* QBaseModel.m */,
+				A145070C1A2C5B3D00BB9650 /* QBaseModelDelegate.h */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1184,6 +1187,7 @@
 				A11EE96C1A29642F00FA478C /* QBaseViewController+LocationGeocoder.h in Headers */,
 				A11EE9721A29642F00FA478C /* QBaseViewControllerDelegate.h in Headers */,
 				A11EE9B11A29642F00FA478C /* AFHTTPRequestOperationManager.h in Headers */,
+				A145070D1A2C5B3D00BB9650 /* QBaseModelDelegate.h in Headers */,
 				A11EE9B51A29642F00FA478C /* AFNetworking.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

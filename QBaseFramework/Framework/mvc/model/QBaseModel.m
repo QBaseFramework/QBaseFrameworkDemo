@@ -121,7 +121,7 @@
 {
     [self inDatabase:^(FMDatabase *db) {
          NSString *sql = [QBaseSqlHanldler deleteSql:[self class]
-                                          conditions:@""];
+                                          conditions:[NSString stringWithFormat:@"qbase_id=%ld",self.qbase_id]];
         [db executeUpdate:sql withArgumentsInArray:@[@(2)]];
      }];
     return YES;
@@ -290,7 +290,7 @@ va_list args_update;
                         [returnValue setObject:[NSString stringWithFormat:@"%ld",(NSInteger)str] forKey:name];
                         continue;
                     }else {
-                        QBASE_LOG(@"不支持的字段类型!%@",class_type);
+//                        QBASE_LOG(@"不支持的字段类型!%@",class_type);
                     }
                 }
             }
@@ -402,7 +402,7 @@ va_list args_update;
                 }
             }else {
                 if (![method isEqualToString:@"setQbase_id"]) {
-                    QBASE_LOG(@"%@ no found" ,method);
+//                    QBASE_LOG(@"%@ no found" ,method);
                 }
                 
             }

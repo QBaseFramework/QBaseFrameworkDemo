@@ -20,31 +20,23 @@
 //todo:把【aa new】也放到里面
 #define Q_DEFINE_SINGLETON_FOR_CLASS(className) \
 \
-+ (className *)shared##className { \
-static className *shared##className = nil; \
-static dispatch_once_t onceToken; \
-dispatch_once(&onceToken, ^{ \
-shared##className = [[self alloc] init]; \
-}); \
-return shared##className; \
++ (className *)shareInstance { \
+    static className *shared##className = nil; \
+    static dispatch_once_t onceToken; \
+    dispatch_once(&onceToken, ^{ \
+    shared##className = [[self alloc] init]; \
+    }); \
+    return shared##className; \
 }
 
 /**
  *  打印日志
  */
-CG_INLINE void QBASE_LOG (NSString *format, ...)
-{
-    
-#if DEBUG
-    va_list args;
-    va_start(args,format);
-    if (format != nil)
-    {
-        NSLogv(format, args);
-    }
-#endif
-    
-}
+//#ifdef DEBUG
+#define QBase_LOG(...) NSLog(__VA_ARGS__)
+//#else
+//#define QBase_LOG(...)
+//#endif
 
 /**
  *  色值宏定义

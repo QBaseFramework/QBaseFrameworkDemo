@@ -7,8 +7,9 @@
 //
 
 #import "JSONModel.h"
+#import "QBaseModelDelegate.h"
 
-@interface QBaseModel : JSONModel
+@interface QBaseModel : JSONModel<QBaseModelDelegate>
 
 /**
  *  主键ID

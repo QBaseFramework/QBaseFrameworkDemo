@@ -454,6 +454,7 @@
 				A1F759F01A2C4CC900FDB160 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1F759F11A2C4CC900FDB160 /* Build configuration list for PBXNativeTarget "DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +463,7 @@
 				A1F759F31A2C4CC900FDB160 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

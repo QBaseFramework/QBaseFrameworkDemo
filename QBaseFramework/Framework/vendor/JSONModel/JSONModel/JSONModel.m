@@ -172,6 +172,11 @@ static JSONKeyMapper* globalKeyMapper = nil;
         return nil;
     }
 
+    // 强制加入qbase_id
+    NSMutableDictionary *tmp_dict = [NSMutableDictionary dictionaryWithDictionary:dict];
+    [tmp_dict setObject:@(1) forKey:@"qbase_id"];
+    dict = tmp_dict;
+    
     //create a class instance
     self = [self init];
     if (!self) {
