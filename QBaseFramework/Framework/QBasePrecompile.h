@@ -14,19 +14,19 @@
  */
 #define Q_DEFINE_SINGLETON_FOR_HEADER(className) \
 \
-+ (className *)shared##className;
++ (className *)shareInstance;
 
 //#if (!__has_feature(objc_arc)) \
 //todo:把【aa new】也放到里面
 #define Q_DEFINE_SINGLETON_FOR_CLASS(className) \
 \
 + (className *)shareInstance { \
-    static className *shared##className = nil; \
+    static className *instance = nil; \
     static dispatch_once_t onceToken; \
     dispatch_once(&onceToken, ^{ \
-    shared##className = [[self alloc] init]; \
+        instance = [[self alloc] init]; \
     }); \
-    return shared##className; \
+    return instance; \
 }
 
 /**

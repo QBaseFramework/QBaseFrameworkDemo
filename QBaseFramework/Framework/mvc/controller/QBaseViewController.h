@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "QBaseViewControllerDelegate.h"
-@interface QBaseViewController : UIViewController<QBaseViewControllerDelegate>
 
+@interface QBaseViewController : UIViewController<QBaseViewControllerDelegate>
 @end
 
 #pragma mark -
 #pragma QBaseViewController Category 扩展函数
 
-#import "QBaseViewController+KeyBoardObserver.h"
 #import "QBaseViewController+Photo.h"
 #import "QBaseViewController+LocationGeocoder.h"

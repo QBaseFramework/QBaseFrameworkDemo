@@ -168,7 +168,7 @@
  */
 - (void)inDatabase:(void (^)(FMDatabase *))block
 {
-    [[QBaseDatabase sharedQBaseDatabase] inDatabase:^(FMDatabase *db) {
+    [[QBaseDatabase shareInstance] inDatabase:^(FMDatabase *db) {
         block(db);
     }];
 }

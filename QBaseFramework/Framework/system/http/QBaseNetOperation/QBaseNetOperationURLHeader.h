@@ -10,14 +10,5 @@
 #ifndef QBaseFrameworkDemo_QBaseNetOperationURLHeader_h
 #define QBaseFrameworkDemo_QBaseNetOperationURLHeader_h
 
-// URL
-
-
-
-
-
-// Model
-
-
 
 #endif

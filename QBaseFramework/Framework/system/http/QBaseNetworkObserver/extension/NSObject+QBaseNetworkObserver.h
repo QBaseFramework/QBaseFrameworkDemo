@@ -25,5 +25,4 @@
  */
 - (void)netStatusChangedCallback:(NSNotification *)note;
 
-
 @end

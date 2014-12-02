@@ -15,8 +15,8 @@
  */
 - (void)registNetStatusNotification
 {
-    [[QBaseNetworkObserver sharedQBaseNetworkObserver] registNotification:self
-                                                                 selector:@selector(netStatusChangedCallback:)];
+    [[QBaseNetworkObserver shareInstance] registNotification:self
+                                                    selector:@selector(netStatusChangedCallback:)];
 }
 
 /**
@@ -24,7 +24,7 @@
  */
 - (void)removeNetStatusNotification
 {
-    [[QBaseNetworkObserver sharedQBaseNetworkObserver] removeNotification:self];
+    [[QBaseNetworkObserver shareInstance] removeNotification:self];
 }
 
 /**

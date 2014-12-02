@@ -98,4 +98,6 @@
     BOOL hasDrop = [_stu dropTable];
     QBASE_LOG(@"是否移除表: %d", hasDrop);
 }
+
+
 @end

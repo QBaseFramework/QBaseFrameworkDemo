@@ -7,6 +7,7 @@
 //
 
 #import "QBaseViewController.h"
+#import "QBaseViewController+KeyBoardObserver.h"
 
 @interface QBaseViewController ()
 
@@ -70,7 +71,6 @@
 {
     // 键盘高度发生变化回调
 }
-
 
 #pragma mark -
 #pragma mark ChoosePhoto 相册选择回调

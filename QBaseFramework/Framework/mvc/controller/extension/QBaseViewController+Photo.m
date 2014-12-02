@@ -26,10 +26,11 @@ if ([UIImagePickerController isSourceTypeAvailable:__sourceType]) {\
                                                otherButtonTitles:@"拍照",@"相册", nil];
     _sheet.tag = CHOOSE_PHOTO_SHEET_TAG;
     
-    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+    // 获取活跃视图
+    UIView *keyView = [[[[UIApplication sharedApplication] keyWindow] rootViewController] view];
 
-    if (keyWindow) {
-        [_sheet showInView:keyWindow];
+    if (keyView) {
+        [_sheet showInView:keyView];
     }else {
         QBASE_LOG(@"%@ 异常", [self class]);
     };

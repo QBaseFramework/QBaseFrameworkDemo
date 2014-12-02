@@ -57,6 +57,4 @@
 - (void)showErrorView;
 - (void)hiddenErrorView;
 
-
-
 @end

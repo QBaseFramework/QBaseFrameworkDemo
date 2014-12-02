@@ -159,7 +159,7 @@
 
 - (void)prepareOperation
 {
-    QBaseNetStatus status = [[QBaseNetworkObserver sharedQBaseNetworkObserver] status];
+    QBaseNetStatus status = [[QBaseNetworkObserver shareInstance] status];
     
     switch (status) {
         case QBaseNetStatus_None:
@@ -282,7 +282,7 @@
 
 - (QBaseRequest *)request
 {
-    return [QBaseRequest sharedQBaseRequest];
+    return [QBaseRequest shareInstance];
 }
 
 - (void)getRequest
